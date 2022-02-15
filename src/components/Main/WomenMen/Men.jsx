@@ -1,5 +1,15 @@
 import React from 'react';
 
+import star from '../../../assets/image/women/star.png'
+import wearmen1 from '../../../assets/image/men/wearmen1.jpg'
+import wearmen2 from '../../../assets/image/men/wearmen2.jpg'
+import wearmen3 from '../../../assets/image/men/wearmen3.jpg'
+import wearmen4 from '../../../assets/image/men/wearmen4.jpg'
+import wearmen5 from '../../../assets/image/men/wearmen5.jpg'
+import wearmen6 from '../../../assets/image/men/wearmen6.jpg'
+import wearmen7 from '../../../assets/image/men/wearmen7.jpg'
+import wearmen8 from '../../../assets/image/men/wearmen8.jpg'
+
 const Men = () => {
   return (
     <section class="womens-block">
@@ -25,129 +35,129 @@ const Men = () => {
           <div class="womens-block-asortment">
             <div class="womens-block-asortment-item">
               <div>
-                <img src="./assets/image/men/wearmen1.jpg" alt="asortment-img" class="asortment-img" />
+                <img src={wearmen1} alt="asortment-img" class="asortment-img" />
               </div>
               <p class="asortment-title">Women's tracksuit Q109</p>
               <div class="asortment-description">
                 <p class="asortment-description-price">$ 30.00</p>
                 <div class="asortment-description-score">
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
                 </div>
               </div>
             </div>
             <div class="womens-block-asortment-item">
               <div>
-                <img src="./assets/image/men/wearmen2.jpg" alt="asortment-img" class="asortment-img" />
+                <img src={wearmen2} alt="asortment-img" class="asortment-img" />
               </div>
               <p class="asortment-title">Women's tracksuit Q109</p>
               <div class="asortment-description">
                 <p class="asortment-description-price">$ 30.00</p>
                 <div class="asortment-description-score">
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
                 </div>
               </div>
             </div>
             <div class="womens-block-asortment-item">
               <div>
-                <img src="./assets/image/men/wearmen3.jpg" alt="asortment-img" class="asortment-img" />
+                <img src={wearmen3} alt="asortment-img" class="asortment-img" />
               </div>
               <p class="asortment-title">Women's tracksuit Q109</p>
               <div class="asortment-description">
                 <p class="asortment-description-price">$ 30.00</p>
                 <div class="asortment-description-score">
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
                 </div>
               </div>
             </div>
             <div class="womens-block-asortment-item">
               <div>
-                <img src="./assets/image/men/wearmen4.jpg" alt="asortment-img" class="asortment-img" />
+                <img src={wearmen4} alt="asortment-img" class="asortment-img" />
               </div>
               <p class="asortment-title">Women's tracksuit Q109</p>
               <div class="asortment-description">
                 <p class="asortment-description-price">$ 30.00</p>
                 <div class="asortment-description-score">
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
                 </div>
               </div>
             </div>
             <div class="womens-block-asortment-item">
               <div>
-                <img src="./assets/image/men/wearmen5.jpg" alt="asortment-img" class="asortment-img" />
+                <img src={wearmen5} alt="asortment-img" class="asortment-img" />
               </div>
               <p class="asortment-title">Women's tracksuit Q109</p>
               <div class="asortment-description">
                 <p class="asortment-description-price">$ 30.00</p>
                 <div class="asortment-description-score">
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
                 </div>
               </div>
             </div>
             <div class="womens-block-asortment-item">
               <div>
-                <img src="./assets/image/men/wearmen6.jpg" alt="asortment-img" class="asortment-img" />
+                <img src={wearmen6} alt="asortment-img" class="asortment-img" />
               </div>
               <p class="asortment-title">Women's tracksuit Q109</p>
               <div class="asortment-description">
                 <p class="asortment-description-price">$ 30.00</p>
                 <div class="asortment-description-score">
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
                 </div>
               </div>
             </div>
             <div class="womens-block-asortment-item">
               <div>
-                <img src="./assets/image/men/wearmen7.jpg" alt="asortment-img" class="asortment-img" />
+                <img src={wearmen7} alt="asortment-img" class="asortment-img" />
               </div>
               <p class="asortment-title">Women's tracksuit Q109</p>
               <div class="asortment-description">
                 <p class="asortment-description-price">$ 30.00</p>
                 <div class="asortment-description-score">
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
                 </div>
               </div>
             </div>
             <div class="womens-block-asortment-item">
               <div>
-                <img src="./assets/image/men/wearmen8.jpg" alt="asortment-img" class="asortment-img" />
+                <img src={wearmen8} alt="asortment-img" class="asortment-img" />
               </div>
               <p class="asortment-title">Women's tracksuit Q109</p>
               <div class="asortment-description">
                 <p class="asortment-description-price">$ 30.00</p>
                 <div class="asortment-description-score">
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
-                  <img src="./assets/image/women/star.png" alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
+                  <img src={star} alt="score" />
                 </div>
               </div>
             </div>

@@ -1,10 +1,12 @@
 import React from 'react';
+import sale from '../../../assets/image/specialoffers/sale.jpg'
+import loockbook from '../../../assets/image/specialoffers/loockbook.jpg'
 
 const LoockBook = () => {
   return (
     <section class="special-offers">
           <div class="banner-block-one">
-            <img src="./assets/image/specialoffers/loockbook.jpg" alt="banner" />
+            <img src={loockbook} alt="banner" />
             <div class="banner-title">
               <div class="banner-title-block">
                 <h5 class="banner-title-title">New Season</h5>
@@ -13,7 +15,7 @@ const LoockBook = () => {
             </div>
           </div>
           <div class="banner-block-one">
-            <img src="./assets/image/specialoffers/sale.jpg" alt="banner" />
+            <img src={sale} alt="banner" />
             <div class="banner-title">
               <div class="banner-title-block">
                 <h5 class="banner-title-title">Sale</h5>

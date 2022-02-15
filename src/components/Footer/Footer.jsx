@@ -1,5 +1,13 @@
 import React from 'react';
 
+import icon5 from '../../assets/image/footer/icon5.png'
+import icon6 from '../../assets/image/footer/icon6.png'
+import icon7 from '../../assets/image/footer/icon7.png'
+import icon8 from '../../assets/image/footer/icon8.png'
+import icon9 from '../../assets/image/footer/icon9.png'
+import icon10 from '../../assets/image/footer/icon10.png'
+import icon11 from '../../assets/image/footer/icon11.png'
+
 const Footer = () => {
   return (
     <div>
@@ -78,13 +86,13 @@ const Footer = () => {
             Copyright © 2032 all rights reserved
           </p>
           <div class="contacts-footer-block-icons">
-            <img src="./assets/image/footer/icon5.png" alt="pay"/>
-            <img src="./assets/image/footer/icon6.png" alt="pay"/>
-            <img src="./assets/image/footer/icon8.png" alt="pay"/>
-            <img src="./assets/image/footer/icon7.png" alt="pay"/>
-            <img src="./assets/image/footer/icon9.png" alt="pay"/>
-            <img src="./assets/image/footer/icon10.png" alt="pay"/>
-            <img src="./assets/image/footer/icon11.png" alt="pay"/>
+            <img src={icon5} alt="pay"/>
+            <img src={icon6} alt="pay"/>
+            <img src={icon7}alt="pay"/>
+            <img src={icon8} alt="pay"/>
+            <img src={icon9} alt="pay"/>
+            <img src={icon10} alt="pay"/>
+            <img src={icon11} alt="pay"/>
           </div>
           <p class="contacts-footer-block-item">
             Clevertec.ru/training

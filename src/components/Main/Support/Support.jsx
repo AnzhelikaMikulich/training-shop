@@ -1,11 +1,14 @@
 import React from 'react';
+import shipping from '../../../assets/image/banner/shipping.png';
+import returned from '../../../assets/image/banner/return.png';
+import support from '../../../assets/image/banner/support.png'
 
 const Support = () => {
   return (
     <section class="delivery-work">
           <div class="work-block">
             <div class="work-block-img">
-              <img src="./assets/image/banner/shipping.png" alt="work-block" />
+              <img src={shipping} alt="work-block" />
             </div>
             <div class="work-block-description">
               <h3 class="work-block-title">FREE SHIPPING</h3>
@@ -16,7 +19,7 @@ const Support = () => {
           </div>
           <div class="work-block">
             <div class="work-block-img">
-              <img src="./assets/image/banner/return.png" alt="work-block" />
+              <img src={returned} alt="work-block" />
             </div>
             <div class="work-block-description">
               <h3 class="work-block-title">30 DAYS RETURN</h3>
@@ -27,7 +30,7 @@ const Support = () => {
           </div>
           <div class="work-block">
             <div class="work-block-img">
-              <img src="./assets/image/banner/support.png" alt="work-block" />
+              <img src={support} alt="work-block" />
             </div>
             <div class="work-block-description">
               <h3 class="work-block-title">SUPPORT 24/7</h3>

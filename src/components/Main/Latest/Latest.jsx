@@ -1,5 +1,9 @@
 import React from 'react';
 
+import latest1 from '../../../assets/image/latest/latest1.jpg';
+import latest2 from '../../../assets/image/latest/latest2.jpg';
+import latest3 from '../../../assets/image/latest/latest3.jpg'
+
 const Latest = () => {
   return (
     <div class="latest-block container">
@@ -17,7 +21,7 @@ const Latest = () => {
         </div>
         <div class="latest-block-content">
           <div class="latest-block-content-item">
-            <img src="./assets/image/latest/latest1.jpg" alt="latest"/>
+            <img src={latest1} alt="latest"/>
             <div class="latest-block-content-title">
               <h3 class="latest-title">The Easiest Way to Break</h3>
               <p class="latest-text">But I must explain to you how all this mistaken idea of denouncing pleas and
@@ -25,7 +29,7 @@ const Latest = () => {
             </div>
           </div>
           <div class="latest-block-content-item">
-            <img src="./assets/image/latest/latest2.jpg" alt="latest"/>
+            <img src={latest2} alt="latest"/>
             <div class="latest-block-content-title">
               <h3 class="latest-title">Wedding Season</h3>
               <p class="latest-text">But I must explain to you how all this mistaken idea of denouncing pleas and
@@ -33,7 +37,7 @@ const Latest = () => {
             </div>
           </div>
           <div class="latest-block-content-item">
-            <img src="./assets/image/latest/latest3.jpg" alt="latest"/>
+            <img src={latest3} alt="latest"/>
             <div class="latest-block-content-title">
               <h3 class="latest-title">Recent Favorites On Repeat</h3>
               <p class="latest-text">But I must explain to you how all this mistaken idea of denouncing pleas and
