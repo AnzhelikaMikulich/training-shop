@@ -3,7 +3,7 @@ import logo from '../../assets/image/CleverShopLogo.png'
 const HeaderLogo = () => {
   return (
     <div class="header-logo">
-            <a href="#section"><img src={logo} /></a>
+            <a href="#section"><img src={logo} alt="logo"/></a>
           </div>
   );
 };
