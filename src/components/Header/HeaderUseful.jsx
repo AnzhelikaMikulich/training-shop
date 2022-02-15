@@ -9,16 +9,16 @@ const HeaderUseful = () => {
     <div class="header-ui">
             <ul class="header-ui-menu">
               <li>
-                <a class="icons-search" href="#"><img src={search} alt="search" /></a>
+                <a class="icons-search" href="#section"><img src={search} alt="search" /></a>
               </li>
               <li>
-                <a class="icons-earth" href="#"><img src={earth} alt="earth" /></a>
+                <a class="icons-earth" href="#section"><img src={earth} alt="earth" /></a>
               </li>
               <li>
-                <a class="icons-human" href="#"><img src={human} alt="human" /></a>
+                <a class="icons-human" href="#section"><img src={human} alt="human" /></a>
               </li>
               <li>
-                <a class="icons-basket" href="#">
+                <a class="icons-basket" href="#section">
                   <img src={basket} alt="basket" />
                 </a>
                 <div class="bascet-counter">2</div>

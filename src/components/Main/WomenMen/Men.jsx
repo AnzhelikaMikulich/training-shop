@@ -7,18 +7,18 @@ const Men = () => {
             <h2 class="womens-block-title">MEN’S</h2>
             <ul class="womens-block-nav">
               <li>
-                <a class="womens-block-nav-title womens-block-nav-active" href="#">NEW ARRIVALS</a>
+                <a class="womens-block-nav-title womens-block-nav-active" href="#section">NEW ARRIVALS</a>
               </li>
-              <li><a class="womens-block-nav-title" href="#">SPECIALS</a></li>
+              <li><a class="womens-block-nav-title" href="#section">SPECIALS</a></li>
               <li>
-                <a class="womens-block-nav-title" href="#">BESTSELLERS</a>
+                <a class="womens-block-nav-title" href="#section">BESTSELLERS</a>
               </li>
               <li>
-                <a class="womens-block-nav-title" href="#">MOST VIEWED</a>
+                <a class="womens-block-nav-title" href="#section">MOST VIEWED</a>
               </li>
 
               <li>
-                <a class="womens-block-nav-title" href="#">FEATURED PRODUCTS</a>
+                <a class="womens-block-nav-title" href="#section">FEATURED PRODUCTS</a>
               </li>
             </ul>
           </div>

@@ -8,7 +8,7 @@ const Latest = () => {
             <h2 class="womens-block-title">LATEST FROM BLOG</h2>
             <ul class="womens-block-nav">
               <li>
-                <a class="womens-block-nav-title womens-block-nav-active" href="#">SEE ALL</a>
+                <a class="womens-block-nav-title womens-block-nav-active" href="#section">SEE ALL</a>
               </li>
 
             </ul>

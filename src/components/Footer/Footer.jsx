@@ -41,15 +41,15 @@ const Footer = () => {
         <h2 class="womens-block-title">Useful links</h2>
         <ul class="womens-block-nav">
           <li>
-            <a class="womens-block-nav-title " href="#">Terms & Conditions
+            <a class="womens-block-nav-title " href="#section">Terms & Conditions
             </a>
           </li>
-          <li><a class="womens-block-nav-title" href="#">Returns & Exchanges</a></li>
+          <li><a class="womens-block-nav-title" href="#section">Returns & Exchanges</a></li>
           <li>
-            <a class="womens-block-nav-title" href="#">Shipping & Delivery</a>
+            <a class="womens-block-nav-title" href="#section">Shipping & Delivery</a>
           </li>
           <li>
-            <a class="womens-block-nav-title" href="#">Privacy Policy</a>
+            <a class="womens-block-nav-title" href="#section">Privacy Policy</a>
           </li>
         </ul>
       </div>
@@ -65,7 +65,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="#" class="header-time womens-block-nav-title footer-data">All week 24/7</a>
+            <a href="#section" class="header-time womens-block-nav-title footer-data">All week 24/7</a>
           </li>
           <li>
             <a class="header-mail womens-block-nav-title footer-data" href="mailto:info@clevertec.ru">info@clevertec.ru</a>
