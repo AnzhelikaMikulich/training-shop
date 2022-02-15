@@ -8,22 +8,22 @@ const HeaderSotial = () => {
     <div class="contacts-sotial">
             <ul class="sotial-links">
               <li>
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                   <Facebook></Facebook>
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/" target="_blank" rel="noopener">
+                <a href="https://twitter.com/" target="_blank" rel="noreferrer">
                   <Twitter></Twitter>
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
                   <Instagramm></Instagramm>
                 </a>
               </li>
               <li>
-                <a href="https://www.pinterest.com/" target="_blank" rel="noopener" >
+                <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer" >
                  <Pinterest></Pinterest>
                 </a>
               </li>
