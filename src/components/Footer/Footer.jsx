@@ -9,31 +9,31 @@ const Footer = () => {
         <h2 class="womens-block-title">Categories</h2>
         <ul class="womens-block-nav">
           <li>
-            <a class="womens-block-nav-title " href="#">Men
+            <a class="womens-block-nav-title " href="#section">Men
             </a>
           </li>
-          <li><a class="womens-block-nav-title" href="#">Women</a></li>
+          <li><a class="womens-block-nav-title" href="#section">Women</a></li>
           <li>
-            <a class="womens-block-nav-title" href="#">Accessories</a>
+            <a class="womens-block-nav-title" href="#section">Accessories</a>
           </li>
           <li>
-            <a class="womens-block-nav-title" href="#">Beauty</a>
+            <a class="womens-block-nav-title" href="#section">Beauty</a>
           </li>
         </ul>
       </div>
       <div class="womens-block-header">
         <h2 class="womens-block-title">Infomation</h2>
         <ul class="womens-block-nav">
-          <li><a class="womens-block-nav-title" href="#">About Us</a></li>
+          <li><a class="womens-block-nav-title" href="#section">About Us</a></li>
           <li>
-            <a class="womens-block-nav-title" href="#"> Contact Us</a>
+            <a class="womens-block-nav-title" href="#section"> Contact Us</a>
           </li>
           <li>
-            <a class="womens-block-nav-title" href="#">Blog</a>
+            <a class="womens-block-nav-title" href="#section">Blog</a>
           </li>
 
           <li>
-            <a class="womens-block-nav-title" href="#">FAQs</a>
+            <a class="womens-block-nav-title" href="#section">FAQs</a>
           </li>
         </ul>
       </div>
