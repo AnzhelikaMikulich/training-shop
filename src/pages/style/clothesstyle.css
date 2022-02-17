@@ -1,0 +1,101 @@
+.womens-block-header-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active-nav {
+  font-weight: 600;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #f8f8f8;
+}
+.header-page {
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5px;
+}
+.header-share {
+  position: relative;
+  background-color: transparent;
+  font-size: 11px;
+}
+.header-share::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -3px;
+  left: -20px;
+  background: url("../../assets/image/pages/share.png");
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.womens-block-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.womens-block {
+  padding: 0px 0px 80px 0;
+}
+.womens-block-header-interface {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.title-page {
+  padding: 10px 0 24px 0;
+}
+.header-path {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+}
+
+/* Filter */
+.filter-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 21px;
+  margin: 37px 0;
+}
+.filter-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.filter-position {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.page-btn {
+  background: transparent;
+}
+.womens-block-loader {
+  width: 231px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.womens-block-loader img {
+  width: 100%;
+}

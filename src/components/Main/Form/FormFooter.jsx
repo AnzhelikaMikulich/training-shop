@@ -2,23 +2,23 @@ import React from 'react';
 
 const FormFooter = () => {
   return (
-    <div class="get-touch">
-        <div class=" get-touch-content container">
-          <div class="get-touch-title">BE IN TOUCH WITH US:</div>
-          <div class="get-touch_block">
-            <form action="#" class="get-touch_form">
-              <div class="get-touch_form-input">
-                <input required placeholder="Enter your email" class="get-touch-input" type="email" />
+    <div className="get-touch">
+        <div className=" get-touch-content container">
+          <div className="get-touch-title">BE IN TOUCH WITH US:</div>
+          <div className="get-touch_block">
+            <form action="#" className="get-touch_form">
+              <div className="get-touch_form-input">
+                <input required placeholder="Enter your email" className="get-touch-input" type="email" />
               </div>
-              <div class="get-touch_form-button">
-                <button type="submit" class="get-touch__form_btn">
+              <div className="get-touch_form-button">
+                <button type="submit" className="get-touch__form_btn">
                   Join Us
                 </button>
               </div>
             </form>
           </div>
-          <div class="contacts-sotial">
-            <ul class="sotial-links">
+          <div className="contacts-sotial">
+            <ul className="sotial-links">
               <li>
                 <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><svg width="14" height="14" viewBox="0 0 14 14"
                     fill="none" xmlns="http://www.w3.org/2000/svg">

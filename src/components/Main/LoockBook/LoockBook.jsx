@@ -4,23 +4,23 @@ import loockbook from '../../../assets/image/specialoffers/loockbook.jpg'
 
 const LoockBook = () => {
   return (
-    <section class="special-offers">
-          <div class="banner-block-one">
+    <section className="special-offers">
+          <div className="banner-block-one">
             <img src={loockbook} alt="banner" />
-            <div class="banner-title">
-              <div class="banner-title-block">
-                <h5 class="banner-title-title">New Season</h5>
-                <p class="banner-title-text">lookbook collection</p>
+            <div className="banner-title">
+              <div className="banner-title-block">
+                <h5 className="banner-title-title">New Season</h5>
+                <p className="banner-title-text">lookbook collection</p>
               </div>
             </div>
           </div>
-          <div class="banner-block-one">
+          <div className="banner-block-one">
             <img src={sale} alt="banner" />
-            <div class="banner-title">
-              <div class="banner-title-block">
-                <h5 class="banner-title-title">Sale</h5>
-                <p class="banner-title-text">
-                  Get UP to <span class="sale-text">50% off</span>
+            <div className="banner-title">
+              <div className="banner-title-block">
+                <h5 className="banner-title-title">Sale</h5>
+                <p className="banner-title-text">
+                  Get UP to <span className="sale-text">50% off</span>
                 </p>
               </div>
             </div>

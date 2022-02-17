@@ -9,42 +9,42 @@ import banner3 from '../../../assets/image/banner/banner3.jpg'
 
 const Banner = () => {
   return (
-    <section class="banner-prevue">
-          <div class="banner-block-one">
+    <section className="banner-prevue">
+          <div className="banner-block-one">
             <img src={banner} alt="banner" />
-            <div class="banner-title">
-              <div class="banner-title-arrov">
+            <div className="banner-title">
+              <div className="banner-title-arrov">
                 <img src={arrovprev} alt="prev" />
               </div>
-              <div class="banner-title-block">
-                <h5 class="banner-title-title">Banner</h5>
-                <p class="banner-title-text">your Title text</p>
+              <div className="banner-title-block">
+                <h5 className="banner-title-title">Banner</h5>
+                <p className="banner-title-text">your Title text</p>
               </div>
-              <div class="banner-title-arrov">
+              <div className="banner-title-arrov">
                 <img src={arrovnext} alt="next" />
               </div>
             </div>
           </div>
-          <div class="banner-block-two">
-            <div class="banner-block-two-top">
-              <div class="banner-block-item">
+          <div className="banner-block-two">
+            <div className="banner-block-two-top">
+              <div className="banner-block-item">
                 <img src={banner1} alt="baner" />
-                <div class="banner-block-item-title">
-                  <p class="banner-block-item-title-description">Women</p>
+                <div className="banner-block-item-title">
+                  <p className="banner-block-item-title-description">Women</p>
                 </div>
               </div>
-              <div class="banner-block-item">
+              <div className="banner-block-item">
                 <img src={banner2} alt="baner" />
-                <div class="banner-block-item-title">
-                  <p class="banner-block-item-title-description">Men</p>
+                <div className="banner-block-item-title">
+                  <p className="banner-block-item-title-description">Men</p>
                 </div>
               </div>
             </div>
-            <div class="banner-block-two-bottom">
-              <div class="banner-block-item">
+            <div className="banner-block-two-bottom">
+              <div className="banner-block-item">
                 <img src={banner3} alt="baner" />
-                <div class="banner-block-item-title">
-                  <p class="banner-block-item-title-description">
+                <div className="banner-block-item-title">
+                  <p className="banner-block-item-title-description">
                     Accessories
                   </p>
                 </div>

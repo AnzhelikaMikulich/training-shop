@@ -6,22 +6,22 @@ import basket from '../../assets/image/icons/card.png'
 
 const HeaderUseful = () => {
   return (
-    <div class="header-ui">
-            <ul class="header-ui-menu">
+    <div className="header-ui">
+            <ul className="header-ui-menu">
               <li>
-                <a class="icons-search" href="#section"><img src={search} alt="search" /></a>
+                <a className="icons-search" href="#section"><img src={search} alt="search" /></a>
               </li>
               <li>
-                <a class="icons-earth" href="#section"><img src={earth} alt="earth" /></a>
+                <a className="icons-earth" href="#section"><img src={earth} alt="earth" /></a>
               </li>
               <li>
-                <a class="icons-human" href="#section"><img src={human} alt="human" /></a>
+                <a className="icons-human" href="#section"><img src={human} alt="human" /></a>
               </li>
               <li>
-                <a class="icons-basket" href="#section">
+                <a className="icons-basket" href="#section">
                   <img src={basket} alt="basket" />
                 </a>
-                <div class="bascet-counter">2</div>
+                <div className="bascet-counter">2</div>
               </li>
             </ul>
           </div>

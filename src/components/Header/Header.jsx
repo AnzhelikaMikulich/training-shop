@@ -3,7 +3,7 @@ import HeaderContacts from './HeaderContacts';
 import HeaderMenu from './HeaderMenu';
 const Header = () => {
   return (
-      <header class="header">
+      <header className="header" data-test-id='header'>
       <HeaderContacts></HeaderContacts>
       <HeaderMenu></HeaderMenu>
     </header>

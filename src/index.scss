@@ -292,6 +292,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 60px;
 }
 .work-block {
   display: flex;
@@ -526,7 +527,7 @@ body {
 .special-offers {
   display: flex;
   gap: 30px;
-  padding: 96px 0;
+  padding-bottom: 96px
 }
 .sale-text {
   color: rgba(233, 30, 99, 1);
@@ -759,75 +760,6 @@ body {
   text-transform: uppercase;
   color: #121212;
 }
-.footer
-  > .container
-  > .womens-block-header
-  > .womens-block-nav
-  > li
-  > .header-phone::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -30px;
-  width: 20px;
-  height: 20px;
-  background-image: url(./assets/image/footer/icon1.png);
-  background-repeat: no-repeat;
-}
-.footer
-  > .container
-  > .womens-block-header
-  > .womens-block-nav
-  > li
-  > .header-time::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -30px;
-  width: 20px;
-  height: 20px;
-  background-image: url(./assets/image/footer/icon2.png);
-  background-repeat: no-repeat;
-}
-.footer
-  > .container
-  > .womens-block-header
-  > .womens-block-nav
-  > li
-  > .header-addres::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -30px;
-  width: 20px;
-  height: 20px;
-  background-image: url(./assets/image/footer/icon3.png);
-  background-repeat: no-repeat;
-}
-.footer
-  > .container
-  > .womens-block-header
-  > .womens-block-nav
-  > li
-  > .header-mail::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -30px;
-  width: 20px;
-  height: 20px;
-  background-image: url(./assets/image/footer/icon4.png);
-  background-repeat: no-repeat;
-}
-.footer
-  > .container
-  > .womens-block-header
-  > .womens-block-nav
-  > li
-  > .footer-data {
-  position: relative;
-  left: 30px;
-}
 .contacts-footer {
   background-color: rgba(248, 248, 248, 1);
 }
@@ -850,6 +782,9 @@ body {
   align-items: center;
   gap: 10px;
 }
+.footer-nav-item{
+  color: #121212;
+}
 @media (max-width: 750px) {
   .footer > .container {
     flex-wrap: wrap;
@@ -868,3 +803,4 @@ body {
     flex-basis: 60%;
   }
 }
+

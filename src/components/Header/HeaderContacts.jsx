@@ -6,8 +6,8 @@ import HeaderSotial from './HeaderSotial';
 const HeaderContacts = () => {
   return (
     
-      <div class="contacts">
-        <div class="container header-contacts">
+      <div className="contacts">
+        <div className="container header-contacts">
         <HeaderAdress></HeaderAdress>
         <HeaderSotial></HeaderSotial>
         </div>

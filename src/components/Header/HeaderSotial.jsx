@@ -5,8 +5,8 @@ import { ReactComponent as Instagramm } from '../../assets/image/icons/instagram
 import { ReactComponent as Pinterest } from '../../assets/image/icons/pinterest.svg';
 const HeaderSotial = () => {
   return (
-    <div class="contacts-sotial">
-            <ul class="sotial-links">
+    <div className="contacts-sotial">
+            <ul className="sotial-links">
               <li>
                 <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                   <Facebook></Facebook>

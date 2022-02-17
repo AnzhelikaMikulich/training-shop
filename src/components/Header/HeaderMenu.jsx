@@ -6,8 +6,8 @@ import HeaderNav from './HeaderNav';
 const HeaderMenu = () => {
   return (
     
-      <div class="navigation">
-        <div class="container header-menu">
+      <div className="navigation">
+        <div className="container header-menu">
         <HeaderLogo></HeaderLogo>
         <HeaderNav></HeaderNav>
           <HeaderUseful></HeaderUseful>
