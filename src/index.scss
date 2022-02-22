@@ -187,7 +187,69 @@ body {
   }
 }
 
+// ----------------burger-menu
+.burger-nav{
+  display: none;
+}
+.burger-btn{
+  width: 30px;
+  height: 20px;
+  position: relative;
+  display: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.burger-btn span{
+  position: absolute;
+  top: 9px;
+  background-color: #121212;
+  width: 30px;
+  height: 2px;
+}
+.burger-btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  background-color: #121212;
+  width: 30px;
+  height: 2px;
+
+}
+.burger-btn::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  background-color: #121212;
+  width: 30px;
+  height: 2px;
+}
+@media (max-width: 1000px){
+  .burger-btn{
+    display: block;
+    
+  }
+  .header-nav{
+    display: none;
+  }
+  .burger-nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    background: aqua;
+    transform: translate(-100%);
+}
+  
+  
+
+}
 /* ----------main */
+.main{
+  margin: 0 0 0 0;
+}
 
 .banner-prevue {
   display: flex;
@@ -341,6 +403,7 @@ body {
     font-size: 10px;
   }
 }
+
 @media (max-width: 766px) {
   .banner-title-block {
     padding: 10px 15px;
