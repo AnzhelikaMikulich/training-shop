@@ -900,6 +900,9 @@ body {
     flex-basis: 45%;
     margin-top: 30px;
   }
+  .contacts-footer-block {
+    flex-direction: column;
+}
 }
 @media (max-width: 430px) {
   .footer > .container {
