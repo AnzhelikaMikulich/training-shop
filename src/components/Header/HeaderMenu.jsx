@@ -8,14 +8,13 @@ import BurgerMenu from './BurgerMenu';
 const HeaderMenu = () => {
   return (
     
-      <div className="navigation blur">
+      <div className="navigation">
         <div className="container header-menu">
         <HeaderLogo></HeaderLogo>
         <HeaderNav></HeaderNav>
         <HeaderUseful></HeaderUseful>
         <HeaderBurger></HeaderBurger>
         </div>
-        <BurgerMenu></BurgerMenu>
       </div>
     
   );
