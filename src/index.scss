@@ -275,7 +275,7 @@ body {
     text-transform: uppercase;
   }
   .burger-nav {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: flex-end;
     width: 100vw;
@@ -287,6 +287,8 @@ body {
   }
   .burger-active{
     transform: translate(-80%);
+    transition: all 0.2s;
+    display: flex;
     
   }
   .blur {
