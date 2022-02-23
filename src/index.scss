@@ -289,7 +289,6 @@ body {
     transform: translate(-80%);
     transition: all 0.2s;
     display: flex;
-    
   }
   .blur {
     width: 100%;
@@ -299,9 +298,7 @@ body {
   }
 }
 @media (max-width: 490px) {
-  .nav-burger {
-    width: 100%;
-  }
+  
   .contacts {
     display: none;
   }
