@@ -12,11 +12,12 @@ const BurgerMenu = ({ active, setActive }) => {
       document.body.style.overflow = "";
     }
   }
-  
+
   return (
     <nav
       className={active ? "burger-nav blur burger-active" : "burger-nav blur"}
       onClick={() => toggleScroll()}
+      data-test-id='burger-menu'
     >
       <ul className="nav-burger" onClick={(e) => e.stopPropagation()}>
         {navItems.map((item) => {

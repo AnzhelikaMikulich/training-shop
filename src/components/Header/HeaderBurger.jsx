@@ -12,10 +12,10 @@ const HeaderBurger = () => {
       document.body.style.overflow = "";
     }
   }
-  
+
   return (
     <div>
-      <div>
+      <div data-test-id='burger-menu-btn'>
         <button
           onClick={() => toggleScroll()}
           className={burgerActive ? "burger-btn active-bnt" : "burger-btn"}
