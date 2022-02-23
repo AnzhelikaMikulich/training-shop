@@ -1,6 +1,7 @@
 import React from 'react';
 import './style/clothesstyle.css';
 import './style/productstyle.css';
+import RelatedSlider from '../components/Sliders/RelatedSlider/RelatedSlider';
 import FormFooter from '../components/Main/Form/FormFooter';
 import arrovNext from '.././assets/image/pages/arrov.png'
 import star from '.././assets/image/women/star.png'
@@ -22,10 +23,6 @@ import pay7 from '.././assets/image/productpage/pay6.png'
 import shipping from '.././assets/image/banner/shipping.png'
 import return1 from '.././assets/image/banner/return.png'
 import send from '.././assets/image/productpage/send.png'
-import product1 from '.././assets/image/productpage/productpage1.png'
-import product2 from '.././assets/image/productpage/productpage2.png'
-import product3 from '.././assets/image/productpage/productpage3.png'
-import product4 from '.././assets/image/productpage/productpage4.png'
 import heart from '.././assets/image/productpage/heart.png'
 import scales from '.././assets/image/productpage/scales.png'
 
@@ -312,91 +309,7 @@ const ProductPage = (props) => {
               <hr />
             </div>
           </div>
-          <div className="other-models">
-            <h3 className="assortment-title">RELATED PRODUCTS</h3>
-            <div className="womens-block-asortment">
-              <div className="womens-block-asortment-item">
-                <div>
-                  <img
-                    src={product1}
-                    alt="asortment-img"
-                    className="asortment-img"
-                  />
-                </div>
-                <p className="asortment-title">Women's tracksuit Q109</p>
-                <div className="asortment-description">
-                  <p className="asortment-description-price">$ 30.00</p>
-                  <div className="asortment-description-score">
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                  </div>
-                </div>
-              </div>
-              <div className="womens-block-asortment-item">
-                <div>
-                  <img
-                    src={product2}
-                    alt="asortment-img"
-                    className="asortment-img"
-                  />
-                </div>
-                <p className="asortment-title">Women's tracksuit Q109</p>
-                <div className="asortment-description">
-                  <p className="asortment-description-price">$ 30.00</p>
-                  <div className="asortment-description-score">
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                  </div>
-                </div>
-              </div>
-              <div className="womens-block-asortment-item">
-                <div>
-                  <img
-                    src={product3}
-                    alt="asortment-img"
-                    className="asortment-img"
-                  />
-                </div>
-                <p className="asortment-title">Women's tracksuit Q109</p>
-                <div className="asortment-description">
-                  <p className="asortment-description-price">$ 30.00</p>
-                  <div className="asortment-description-score">
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                  </div>
-                </div>
-              </div>
-              <div className="womens-block-asortment-item">
-                <div>
-                  <img
-                    src={product4}
-                    alt="asortment-img"
-                    className="asortment-img"
-                  />
-                </div>
-                <p className="asortment-title">Women's tracksuit Q109</p>
-                <div className="asortment-description">
-                  <p className="asortment-description-price">$ 30.00</p>
-                  <div className="asortment-description-score">
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                    <img src={star} alt="score" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <RelatedSlider></RelatedSlider>
         </div>
         <FormFooter></FormFooter>
       </main>

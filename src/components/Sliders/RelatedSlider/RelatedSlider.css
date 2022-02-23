@@ -1,0 +1,38 @@
+.other-models > .swiper {
+  width: 100%;
+  overflow: visible;
+  position: relative;
+}
+.other-models > .swiper > .swiper-button-prev {
+  position: absolute;
+  top: -50px;
+  left: 90%;
+}
+.other-models > .swiper > .swiper-button-next {
+  position: absolute;
+  top: -50px;
+}
+.other-models > .swiper > .swiper-wrapper > .swiper-slide {
+  width: 25%;
+}
+.womens-block-asortment-item-img {
+  width: 100%;
+}
+.womens-block-asortment-item-img > img {
+  width: 100%;
+}
+@media (max-width: 920px) {
+  .other-models > .swiper > .swiper-button-prev {
+    left: 85%;
+  }
+}
+@media (max-width: 670px) {
+  .other-models > .swiper > .swiper-button-prev {
+    left: 80%;
+  }
+}
+@media (max-width: 510px) {
+  .other-models > .swiper > .swiper-button-prev {
+    left: 75%;
+  }
+}

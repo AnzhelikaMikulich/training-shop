@@ -255,4 +255,5 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  overflow: hidden;
 }
