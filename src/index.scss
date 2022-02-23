@@ -278,7 +278,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 100vw;
+    width: 110%;
     height: 100vh;
     position: fixed;
     z-index: 10;
@@ -288,12 +288,7 @@ body {
   .nav-burger-active{
     visibility: visible;
   }
-  // .blur {
-  //   width: 100%;
-  //   height: 100vh;
-  //   backdrop-filter: blur(2px);
-   
-  // }
+  
 }
 @media (max-width: 490px) {
   
