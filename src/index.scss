@@ -260,14 +260,14 @@ body {
   }
   .nav-burger {
     display: flex;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.8);
     flex-direction: column;
     gap: 15px;
     align-items: center;
     padding-top: 35px;
-   
+    visibility: hidden;
   }
   .nav-burger > .nav-menu {
     font-size: 18px;
@@ -285,15 +285,15 @@ body {
     transform: translate(-80%);
     visibility: hidden;
   }
-  .burger-active{
+  .nav-burger-active{
     visibility: visible;
   }
-  .blur {
-    width: 100%;
-    height: 100vh;
-    backdrop-filter: blur(2px);
+  // .blur {
+  //   width: 100%;
+  //   height: 100vh;
+  //   backdrop-filter: blur(2px);
    
-  }
+  // }
 }
 @media (max-width: 490px) {
   

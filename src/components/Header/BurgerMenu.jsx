@@ -15,11 +15,11 @@ const BurgerMenu = ({ active, setActive }) => {
 
   return (
     <nav
-      className={active ? "burger-nav blur burger-active" : "burger-nav blur"}
+      className="burger-nav"
       onClick={() => toggleScroll()}
-      data-test-id='burger-menu'
+      
     >
-      <ul className="nav-burger" onClick={(e) => e.stopPropagation()}>
+      <ul className={active ? "nav-burger nav-burger-active" : "nav-burger"}  data-test-id='burger-menu'>
         {navItems.map((item) => {
           return (
             <Link
