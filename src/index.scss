@@ -259,7 +259,7 @@ body {
     display: none;
   }
   .nav-burger {
-    display: flex;
+    display: none;
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
@@ -287,6 +287,7 @@ body {
   }
   .nav-burger-active{
     visibility: visible;
+    display: flex;
   }
   
 }
