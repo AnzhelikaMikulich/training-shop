@@ -7,6 +7,12 @@
 .slider-smoll > .arrow-slider > .swiper-button-lock {
   display: block;
 }
+.slider-smoll > .swiper > .swiper-wrapper > .swiper-slide-visible {
+  opacity: 0.4;
+}
+.slider-smoll > .swiper > .swiper-wrapper > .swiper-slide-thumb-active {
+  opacity: 1;
+}
 @media (max-width: 1120px) {
   .slider-galerry {
     height: 450px;
