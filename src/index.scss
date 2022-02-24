@@ -269,6 +269,10 @@ body {
     padding-top: 35px;
     visibility: hidden;
   }
+  .nav-burger-active{
+    visibility: visible;
+    display: flex;
+  }
   .nav-burger > .nav-menu {
     font-size: 18px;
     font-weight: 500;
@@ -285,10 +289,7 @@ body {
     transform: translate(-80%);
     visibility: hidden;
   }
-  .nav-burger-active{
-    visibility: visible;
-    display: flex;
-  }
+  
   
 }
 @media (max-width: 490px) {

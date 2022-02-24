@@ -1,14 +1,11 @@
 import React from 'react';
 import './style/clothesstyle.css';
 import './style/productstyle.css';
+import ProductSlider from '../components/Sliders/ProductSlider/ProductSlider';
 import RelatedSlider from '../components/Sliders/RelatedSlider/RelatedSlider';
 import FormFooter from '../components/Main/Form/FormFooter';
 import arrovNext from '.././assets/image/pages/arrov.png'
 import star from '.././assets/image/women/star.png'
-import wear from '.././assets/image/productpage/wear.png'
-import slider1 from '.././assets/image/productpage/slider1.png'
-import slider2 from '.././assets/image/productpage/slider2.png'
-import slider3 from '.././assets/image/productpage/slider3.png'
 import model1 from '.././assets/image/productpage/model1.png'
 import model2 from '.././assets/image/productpage/model2.png'
 import model3 from '.././assets/image/productpage/model3.png'
@@ -69,55 +66,7 @@ const ProductPage = (props) => {
         </div>
         <div className="container">
           <div className="product-page-content">
-            <div className="slider-product-page">
-              <div className="slider-smoll">
-                <div className="arrow-slider">
-                  <div className="arrow-slider-prew"></div>
-                  <div className="arrow-slider-next"></div>
-                </div>
-                <div className="slider-galerry">
-                  <div>
-                    <img
-                      className="slider-galerry-item"
-                      src={wear}
-                      alt="wear"
-                    />
-                  </div>
-                  <div className="opasity-slid">
-                    <img
-                      className="slider-galerry-item"
-                      src={slider1}
-                      alt="wear"
-                    />
-                  </div>
-                  <div className="opasity-slid">
-                    <img
-                      className="slider-galerry-item"
-                      src={slider2}
-                      alt="wear"
-                    />
-                  </div>
-                  <div className="opasity-slid">
-                    <img
-                      className="slider-galerry-item"
-                      src={slider3}
-                      alt="wear"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="slider-main">
-                <div className="arrow-slider-prew slider-prew"></div>
-                <div className="slider-block">
-                  <img
-                    className="slider-img"
-                    src={wear}
-                    alt="wear"
-                  />
-                </div>
-                <div className="arrow-slider-next slider-next"></div>
-              </div>
-            </div>
+          <ProductSlider></ProductSlider>
             <div className="description-product-page">
               <div className="description-product-page__color">
                 <p className="color-model">
