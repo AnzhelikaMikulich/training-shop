@@ -8,12 +8,12 @@ const FilterBlock = () => {
   return (
     <div>
       <section className="filter-block">
-            <div className="filter-button">
-              <button className="page-btn">
+            <button className="filter-button " data-test-id='filter-button'>
+              <div className="page-btn">
                 <img src={filter} alt="filter" />
-              </button>
+              </div>
               <p>FILTER</p>
-            </div>
+            </button>
             <div className="filter-position">
               <button className="page-btn">
                 <img src={list} alt="table" />
