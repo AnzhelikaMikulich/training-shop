@@ -13,9 +13,9 @@ const Men = () => {
               <li
                 key={item.id}
                 className="womens-block-nav-title womens-block-nav-active"
-                data-test-id={`clothes-men-${item.name}`}
+                data-test-id={`clothes-men-${item.particularName}`}
               >
-                {item.text}
+                {item.name}
               </li>
             );
           })}

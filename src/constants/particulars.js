@@ -1,7 +1,7 @@
 export const PARTICULARS = [
-  { id: '1', name: 'isNewArrivals', text: 'NEW ARRIVALS' },
-  { id: '2', name: 'isSpecial', text: 'SPECIALS' },
-  { id: '3', name: 'isBestseller', text: 'BESTSELLERS' },
-  { id: '4', name: 'isMostViewed', text: 'MOST VIEWED' },
-  { id: '5', name: 'isFeatured', text: 'FEATURED PRODUCTS' },
+  { id: '1', particularName: 'isNewArrivals', name: 'NEW ARRIVALS' },
+  { id: '2', particularName: 'isSpecial', name: 'SPECIALS' },
+  { id: '3', particularName: 'isBestseller', name: 'BESTSELLERS' },
+  { id: '4', particularName: 'isMostViewed', name: 'MOST VIEWED' },
+  { id: '5', particularName: 'isFeatured', name: 'FEATURED PRODUCTS' },
 ];

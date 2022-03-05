@@ -570,9 +570,12 @@ body {
   flex-direction: column;
   gap: 12px;
 }
+.cards-item{
+  width: 22%;
+}
 .asortment-img {
   object-fit: contain;
-  // width: 100%;
+  width: 100%;
 }
 .asortment-title {
   font-size: 14px;
