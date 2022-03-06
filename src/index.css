@@ -606,6 +606,32 @@ body {
   padding: 15px 0;
   background-color: #f8f8f8;
 }
+.womens-block-asortment-img {
+  position: relative;
+}
+.womens-block-asortment-discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  background-color: rgb(233, 30, 99);
+  color: rgb(255, 255, 255);
+  display: flex;
+  height: 8%;
+  justify-content: center;
+  width: 22%;
+  font: 600 12px / 13px "Spartan", sans-serif;
+}
+.womens-block-asortment-discount-none,
+.asortment-description-discount-none {
+  display: none;
+}
+.asortment-description-discount {
+  color: rgb(160, 160, 160);
+  margin-left: 6px;
+  font: 700 12px "Spartan", sans-serif;
+  text-decoration: line-through;
+}
 @media (max-width: 920px) {
   .womens-block-header {
     flex-direction: column;
