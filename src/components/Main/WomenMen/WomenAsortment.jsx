@@ -2,6 +2,7 @@ import React from "react";
 import star from "../../../assets/image/women/star.png";
 import { Link } from "react-router-dom";
 import { PRODUCTS } from "../../../constants/data";
+
 const WomenAsortment = () => {
   return (
     <div>

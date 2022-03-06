@@ -4,24 +4,19 @@ import './style/productstyle.css';
 import ProductSlider from '../components/Sliders/ProductSlider/ProductSlider';
 import RelatedSlider from '../components/Sliders/RelatedSlider/RelatedSlider';
 import FormFooter from '../components/Main/Form/FormFooter';
+import PaySystem from '../components/ProductPage/PaySystem';
 import arrovNext from '.././assets/image/pages/arrov.png'
 import star from '.././assets/image/women/star.png'
 import model1 from '.././assets/image/productpage/model1.png'
 import model2 from '.././assets/image/productpage/model2.png'
 import model3 from '.././assets/image/productpage/model3.png'
 import model4 from '.././assets/image/productpage/model4.png'
-import pay1 from '.././assets/image/productpage/pay1.png'
-import pay2 from '.././assets/image/productpage/pay2.png'
-import pay3 from '.././assets/image/productpage/pay3.png'
-import pay4 from '.././assets/image/productpage/pay4.png'
-import pay5 from '.././assets/image/productpage/pay5.png'
-import pay6 from '.././assets/image/productpage/pay6.png'
-import pay7 from '.././assets/image/productpage/pay6.png'
 import shipping from '.././assets/image/banner/shipping.png'
 import return1 from '.././assets/image/banner/return.png'
 import send from '.././assets/image/productpage/send.png'
 import heart from '.././assets/image/productpage/heart.png'
 import scales from '.././assets/image/productpage/scales.png'
+
 
 const ProductPage = (props) => {
   return (
@@ -164,29 +159,7 @@ const ProductPage = (props) => {
               <hr />
               <div className="description-product-page__guaranties">
                 <h3 className="guaranties-title">guaranteed safe checkout</h3>
-                <div className="contacts-footer-block-icons pay-icons">
-                  <div>
-                    <img src={pay1} alt="pay" />
-                  </div>
-                  <div>
-                    <img src={pay7} alt="pay" />
-                  </div>
-                  <div>
-                    <img src={pay2} alt="pay" />
-                  </div>
-                  <div>
-                    <img src={pay3} alt="pay" />
-                  </div>
-                  <div>
-                    <img src={pay4} alt="pay" />
-                  </div>
-                  <div>
-                    <img src={pay5} alt="pay" />
-                  </div>
-                  <div>
-                    <img src={pay6} alt="pay" />
-                  </div>
-                </div>
+                <PaySystem></PaySystem>
               </div>
               <hr />
               <div className="description-product-page__description">
