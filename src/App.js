@@ -6,9 +6,14 @@ import Footer from './components/Footer/Footer';
 import ProductPage from './pages/ProductPage';
 import ClothesWomen from './pages/ClothesWomen';
 import ClothesMen from './pages/ClothesMen';
-
+import { PRODUCTS } from './constants/data';
 
 function App() {
+  const ProductPageRoutes = Object.values(PRODUCTS).map((items)=>items.map((item)=>(
+    <Route exact path={`/${item.category}/${item.id}`}key={item.id} element={<ProductPage product={item} type={item.category}/>} />
+
+  )))
+
   return (
     <HashRouter>
       <div className="app" data-test-id='app'>
@@ -19,8 +24,7 @@ function App() {
           <Route exact path="/" element={<Main />} />
           <Route exact path="/women" element={<ClothesWomen />} />
           <Route exact path="/men" element={<ClothesMen />} />
-          <Route exact path="/women/1" element={<ProductPage type="women"/>} />
-          <Route exact path="/men/1" element={<ProductPage type="men"/>} />
+          {ProductPageRoutes}
         </Routes>
         
     <Footer></Footer>
