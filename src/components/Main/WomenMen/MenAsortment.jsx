@@ -38,7 +38,7 @@ const MenAsortment = () => {
                     item.discount === null
                       ? item.price
                       : (
-                          item.price +
+                          item.price -
                           (item.price / 100) *
                             parseInt(item.discount.match(/\d+/), 10)
                         ).toFixed(2)

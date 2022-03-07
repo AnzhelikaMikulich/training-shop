@@ -130,7 +130,26 @@ const ProductPage = ({ type, product }) => {
               </div>
               <hr />
               <div className="description-product-page__price">
-                <div className="price-model">$ {product.price}</div>
+                <div className="price-model"><p className="asortment-description-price">
+                  {`$ ${
+                    product.discount === null
+                      ? product.price
+                      : (
+                        product.price -
+                          (product.price / 100) *
+                            parseInt(product.discount.match(/\d+/), 10)
+                        ).toFixed(2)
+                  }`}
+                  <span
+                    className={
+                      product.discount != null
+                        ? "asortment-description-discount"
+                        : "asortment-description-discount-none"
+                    }
+                  >
+                    ${product.price}
+                  </span>
+                </p></div>
                 <button className="card-add">Add to card</button>
                 <div className="price-icon-heard">
                   <img src={heart} alt="heart" />
