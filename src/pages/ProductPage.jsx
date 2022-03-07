@@ -130,7 +130,7 @@ const ProductPage = ({ type, product }) => {
               </div>
               <hr />
               <div className="description-product-page__price">
-                <div className="price-model">$ 379.99</div>
+                <div className="price-model">$ {product.price}</div>
                 <button className="card-add">Add to card</button>
                 <div className="price-icon-heard">
                   <img src={heart} alt="heart" />
