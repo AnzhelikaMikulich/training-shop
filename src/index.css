@@ -547,13 +547,15 @@ body {
 .womens-block-nav-title {
   font-size: 13px;
   font-weight: 500;
-  color: #1a1a1a;
+  color: rgb(113, 113, 113);
+  font-weight: 500;
   opacity: 0.6;
   text-align: right;
   cursor: pointer;
 }
 .womens-block-nav-active {
-  color: #121212;
+  color: rgb(18, 18, 18);
+  font-weight: 500;
   opacity: 1;
 }
 .womens-block-asortment {
@@ -605,6 +607,7 @@ body {
   opacity: 0.8;
   padding: 15px 0;
   background-color: #f8f8f8;
+  cursor: pointer;
 }
 .womens-block-asortment-img {
   position: relative;

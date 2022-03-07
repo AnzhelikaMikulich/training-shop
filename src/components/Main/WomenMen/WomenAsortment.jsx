@@ -24,7 +24,6 @@ const WomenAsortment = () => {
                         : "womens-block-asortment-discount"
                     }
                   >
-                    
                     {item.discount}
                   </div>
                   <img
