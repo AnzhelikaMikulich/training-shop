@@ -70,7 +70,7 @@ hr {
   display: flex;
   align-items: center;
   position: relative;
-  width: 83%;
+  width: 80%;
 }
 .slider-block {
   width: 100%;
@@ -114,7 +114,7 @@ hr {
 .description-product-page__color {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 10px;
 }
 .color-model {
   font-style: normal;

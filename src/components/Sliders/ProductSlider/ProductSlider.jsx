@@ -2,12 +2,11 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { productItems } from "./ProductItem";
 import { useState } from "react";
 import { Navigation, FreeMode, Thumbs } from "swiper";
 import "./ProductSlider.css";
 
-const ProductSlider = () => {
+const ProductSlider = ({ product }) => {
   const [smollSlider, setSmollSlider] = useState(null);
   const [mainSlider, setMainSlider] = useState(null);
 
@@ -15,60 +14,67 @@ const ProductSlider = () => {
     <div className="slider-product-page" data-test-id="product-slider">
       <div className="slider-smoll">
         <div className="arrow-slider">
-          <div className="arrow-slider-prew" onClick={() => {
+          <div
+            className="arrow-slider-prew"
+            onClick={() => {
               mainSlider.slideNext();
-            }}></div>
-          <div className="arrow-slider-next" onClick={() => {
+            }}
+          ></div>
+          <div
+            className="arrow-slider-next"
+            onClick={() => {
               mainSlider.slidePrev();
-            }}></div>
+            }}
+          ></div>
         </div>
         <Swiper
-        onSwiper={setSmollSlider}
-        modules={[Navigation, FreeMode,Thumbs]}
-        navigation={{
+          onSwiper={setSmollSlider}
+          modules={[Navigation, FreeMode, Thumbs]}
+          navigation={{
             prevEl: ".arrow-slider-prew",
             nextEl: ".arrow-slider-next",
           }}
-       
           direction={"vertical"}
           slidesPerView={4}
           spaceBetween={30}
           slidesPerGroup={1}
           freeMode={true}
           watchSlidesProgress={true}
-          
-         
           className="slider-galerry"
         >
-          {productItems.map((item) => {
-          return (
-            <SwiperSlide key={item.id}>
-              <img className="slider-galerry-item" src={item.image} alt="wear" />
-            </SwiperSlide>
-          );
-        })}
+          {product.images.map((item) => {
+            return (
+              <SwiperSlide key={item.id}>
+                <img
+                  className="slider-galerry-item"
+                  src={`https://training.cleverland.by/shop${item.url}`}
+                  alt="wear"
+                />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
-        </div>
+      </div>
       <Swiper
-       onSwiper={setMainSlider}
-      
+        onSwiper={setMainSlider}
         className="slider-main"
         navigation={true}
-       
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
         thumbs={{ swiper: smollSlider }}
-    
       >
-        {productItems.map((item) => {
+        {product.images.map((item) => {
           return (
             <SwiperSlide className="slider-block" key={item.id}>
-              <img className="slider-img" src={item.image} alt="wear" />
+              <img
+                className="slider-img"
+                src={`https://training.cleverland.by/shop${item.url}`}
+                alt="wear"
+              />
             </SwiperSlide>
           );
         })}
       </Swiper>
-      
     </div>
   );
 };

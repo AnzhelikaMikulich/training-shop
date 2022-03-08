@@ -9,7 +9,6 @@ import Score from "../components/ProductPage/Score";
 import FormFooter from "../components/Main/Form/FormFooter";
 import PaySystem from "../components/ProductPage/PaySystem";
 import arrovNext from ".././assets/image/pages/arrov.png";
-import star from ".././assets/image/women/star.png";
 import shipping from ".././assets/image/banner/shipping.png";
 import return1 from ".././assets/image/banner/return.png";
 import send from ".././assets/image/productpage/send.png";
@@ -21,6 +20,11 @@ const ProductPage = ({ type, product }) => {
   const [activeColor, setActiveColor] = useState(product.images[0].color);
   const [activeSize, setActiveSize] = useState(product.sizes[0]);
   let uniqueColors = new Set(product.images.map(({ color }) => color));
+  let workBlock = [
+    { image: shipping , text: "Shipping & Delivery" },
+    { image: return1, text: "Returns & Exchanges" },
+    { image: send, text: "Ask a question" },
+  ];
 
   return (
     <div className="page-product" data-test-id={`product-page-${type}`}>
@@ -29,13 +33,13 @@ const ProductPage = ({ type, product }) => {
           <div className="container womens-block-header-content">
             <div className="womens-block-header-interface">
               <div className="header-path">
-              <Link to={`/`}>
-              <span>Home</span>
-             </Link>
+                <Link to={`/`}>
+                  <span>Home</span>
+                </Link>
                 <img src={arrovNext} alt="arrow" />
                 <Link to={`/${product.category}`}>
-                <span>{product.category}</span>
-             </Link>
+                  <span>{product.category}</span>
+                </Link>
                 <img src={arrovNext} alt="arrow" />
                 <span className="active-nav">{product.name}</span>
               </div>
@@ -67,7 +71,7 @@ const ProductPage = ({ type, product }) => {
         </div>
         <div className="container">
           <div className="product-page-content">
-            <ProductSlider></ProductSlider>
+            <ProductSlider product={product}></ProductSlider>
             <div className="description-product-page">
               <div className="description-product-page__color">
                 <p className="color-model">
@@ -162,30 +166,16 @@ const ProductPage = ({ type, product }) => {
               </div>
               <hr />
               <div className="delivery-work description-product-page__shipping">
-                <div className="work-block">
+                {workBlock.map((item, index)=>{
+                  return(<div className="work-block" key={index} >
                   <div className="work-block-img">
-                    <img src={shipping} alt="work-block" />
+                    <img src={item.image} alt="work-block" />
                   </div>
                   <div className="work-block-description">
-                    <p className="work-block-text">Shipping & Delivery</p>
+                    <p className="work-block-text">{item.text}</p>
                   </div>
-                </div>
-                <div className="work-block">
-                  <div className="work-block-img">
-                    <img src={return1} alt="work-block" />
-                  </div>
-                  <div className="work-block-description">
-                    <p className="work-block-text">Returns & Exchanges</p>
-                  </div>
-                </div>
-                <div className="work-block">
-                  <div className="work-block-img">
-                    <img src={send} alt="work-block" />
-                  </div>
-                  <div className="work-block-description">
-                    <p className="work-block-text">Ask a question</p>
-                  </div>
-                </div>
+                </div>)
+                })}
               </div>
               <hr />
               <div className="description-product-page__guaranties">
@@ -207,17 +197,22 @@ const ProductPage = ({ type, product }) => {
                     .map((item) =>
                       product.images.find(({ color }) => color === item)
                     )
-                    .map(({color,id}) => {
+                    .map(({ color, id }) => {
                       return (
-                        <span key={id} className="no-accent">{color}</span>
+                        <span key={id} className="no-accent">
+                          {color}
+                        </span>
                       );
                     })}
-                  
                 </p>
                 <p className="model-description-acсent">
                   Size:
-                  {product.sizes.map((item,id) => {
-                    return <span className="no-accent" key={id}>{item}</span>;
+                  {product.sizes.map((item, id) => {
+                    return (
+                      <span className="no-accent" key={id}>
+                        {item}
+                      </span>
+                    );
                   })}
                 </p>
                 <p className="model-description-acсent">
@@ -229,23 +224,25 @@ const ProductPage = ({ type, product }) => {
                 <h3 className="guaranties-title">REVIEWS</h3>
                 <div className="reviews-item-stars">
                   <div className="review-description">
-                  <Score></Score>
-                    <div className="score-counter">{product.reviews.length
-                    ? `${product.reviews.length}Reviews`
-                    : `No Reviews`}</div>
+                    <Score></Score>
+                    <div className="score-counter">
+                      {product.reviews.length
+                        ? `${product.reviews.length}Reviews`
+                        : `No Reviews`}
+                    </div>
                   </div>
                   <p>Write a review</p>
                 </div>
-                {product.reviews.map((item)=>{
-                  return (<div className="reviews-item" key={item.id}>
-                  <div className="reviews-item-stars">
-                    <p className="review-name">{item.name}</p>
-                    <Score></Score>
-                  </div>
-                  <div>
-                    {item.text}
-                  </div>
-                </div>)
+                {product.reviews.map((item) => {
+                  return (
+                    <div className="reviews-item" key={item.id}>
+                      <div className="reviews-item-stars">
+                        <p className="review-name">{item.name}</p>
+                        <Score></Score>
+                      </div>
+                      <div>{item.text}</div>
+                    </div>
+                  );
                 })}
               </div>
               <hr />
