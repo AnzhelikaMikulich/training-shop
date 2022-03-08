@@ -2,20 +2,26 @@ import React from "react";
 import Score from "../../ProductPage/Score";
 import { Link } from "react-router-dom";
 import { PRODUCTS } from "../../../constants/data";
+import { PARTICULARS } from "../../../constants/particulars";
 
-const WomenAsortment = () => {
+const WomenAsortment = ({activeItem}) => {
+ 
+  let activeParticulars = PARTICULARS[activeItem].particularName
   return (
     <div>
       <div className="womens-block-asortment">
         {PRODUCTS.women.map((item) => {
-          return (
+          if (item.particulars[activeParticulars]) {
+             return (
             <Link
               key={item.id}
               to={`/women/${item.id}`}
               className="cards-item"
               data-test-id={`clothes-card-women`}
             >
+              
               <div className="womens-block-asortment-item">
+              
                 <div className="womens-block-asortment-img">
                   <div
                     className={
@@ -59,6 +65,8 @@ const WomenAsortment = () => {
               </div>
             </Link>
           );
+          }
+         
         })}
       </div>
     </div>
