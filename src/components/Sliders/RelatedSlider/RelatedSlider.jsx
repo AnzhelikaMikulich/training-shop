@@ -30,8 +30,8 @@ const RelatedSlider = () => {
       >
         {relatedItems.map((item) => {
           return (
-            <SwiperSlide className="womens-block-asortment-item">
-              <div className="womens-block-asortment-item-img" key={item.id}>
+            <SwiperSlide className="womens-block-asortment-item" key={item.id}>
+              <div className="womens-block-asortment-item-img" >
                 <img
                   src={item.image}
                   alt="asortment-img"

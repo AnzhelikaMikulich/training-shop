@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <footer className="footer" data-test-id="footer">
       <div className="container">
-        {footerNavItems.map((item) => {
+        {footerNavItems.map((item, index) => {
           return (
-            <div className="womens-block-header">
+            <div className="womens-block-header" key={index}>
               <h2
                 className="footer__nav-title womens-block-title"
                 key={item.id}

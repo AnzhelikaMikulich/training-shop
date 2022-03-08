@@ -11,8 +11,8 @@ import FormFooter from '../components/Main/Form/FormFooter';
 const Main = () => {
   return (
     <div>
-      <main class="main">
-      <div class="container">
+      <main className="main">
+      <div className="container">
         <Banner></Banner>
         <Support></Support>
         <Women></Women>

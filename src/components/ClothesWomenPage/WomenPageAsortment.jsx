@@ -1,27 +1,21 @@
 import React from "react";
-import Score from "../../ProductPage/Score";
+import Score from "../ProductPage/Score";
 import { Link } from "react-router-dom";
-import { PRODUCTS } from "../../../constants/data";
-import { PARTICULARS } from "../../../constants/particulars";
+import { PRODUCTS } from "../../constants/data";
 
-const WomenAsortment = ({activeItem}) => {
- 
-  let activeParticulars = PARTICULARS[activeItem].particularName
+const WomenPageAsortment = () => {
   return (
     <div>
       <div className="womens-block-asortment">
         {PRODUCTS.women.map((item) => {
-          if (item.particulars[activeParticulars]) {
-             return (
+          return (
             <Link
               key={item.id}
               to={`/women/${item.id}`}
               className="cards-item"
               data-test-id={`clothes-card-women`}
             >
-              
               <div className="womens-block-asortment-item">
-              
                 <div className="womens-block-asortment-img">
                   <div
                     className={
@@ -65,12 +59,10 @@ const WomenAsortment = ({activeItem}) => {
               </div>
             </Link>
           );
-          }
-         
         })}
       </div>
     </div>
   );
 };
 
-export default WomenAsortment;
+export default WomenPageAsortment;

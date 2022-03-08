@@ -12,10 +12,10 @@ const Form = () => {
           <div className="banner-title">
             <div className="banner-title-block subscribe-form-content">
               <h5 className="banner-title-title">Special Offer</h5>
-              <p className="banner-title-text">
+              <div className="banner-title-text">
                 Subscribe
               <p className="banner-title-text">And <span className="sale-text">Get 10% Off</span></p>
-              </p>
+              </div>
               <form action="#" className="subscribe-form_form">
                 <div className="subscribe-form_form-input">
                   <input required placeholder="Enter your email" className="input" type="email" />
