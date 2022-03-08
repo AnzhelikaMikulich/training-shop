@@ -198,6 +198,8 @@ hr {
 .model-description-acсent {
   font-weight: bold;
   text-transform: none;
+  display: flex;
+  gap: 10px;
 }
 .choise-models {
   display: flex;

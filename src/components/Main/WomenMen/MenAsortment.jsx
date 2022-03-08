@@ -1,5 +1,5 @@
 import React from "react";
-import star from "../../../assets/image/women/star.png";
+import Score from "../../ProductPage/Score";
 import { Link } from "react-router-dom";
 import { PRODUCTS } from "../../../constants/data";
 
@@ -53,13 +53,7 @@ const MenAsortment = () => {
                     ${item.price}
                   </span>
                 </p>
-                <div className="asortment-description-score">
-                  <img src={star} alt="score" />
-                  <img src={star} alt="score" />
-                  <img src={star} alt="score" />
-                  <img src={star} alt="score" />
-                  <img src={star} alt="score" />
-                </div>
+                <Score></Score>
               </div>
             </div>
           </Link>

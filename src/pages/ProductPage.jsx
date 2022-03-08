@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./style/clothesstyle.css";
 import "./style/productstyle.css";
 import ProductSlider from "../components/Sliders/ProductSlider/ProductSlider";
 import RelatedSlider from "../components/Sliders/RelatedSlider/RelatedSlider";
+import Score from "../components/ProductPage/Score";
 import FormFooter from "../components/Main/Form/FormFooter";
 import PaySystem from "../components/ProductPage/PaySystem";
 import arrovNext from ".././assets/image/pages/arrov.png";
@@ -27,9 +29,13 @@ const ProductPage = ({ type, product }) => {
           <div className="container womens-block-header-content">
             <div className="womens-block-header-interface">
               <div className="header-path">
-                <span>Home</span>
+              <Link to={`/`}>
+              <span>Home</span>
+             </Link>
                 <img src={arrovNext} alt="arrow" />
+                <Link to={`/${product.category}`}>
                 <span>{product.category}</span>
+             </Link>
                 <img src={arrovNext} alt="arrow" />
                 <span className="active-nav">{product.name}</span>
               </div>
@@ -40,13 +46,7 @@ const ProductPage = ({ type, product }) => {
             </h2>
             <div className="womens-block-header-interface">
               <div className="header-path">
-                <div className="asortment-description-score">
-                  <img src={star} alt="score" />
-                  <img src={star} alt="score" />
-                  <img src={star} alt="score" />
-                  <img src={star} alt="score" />
-                  <img src={star} alt="score" />
-                </div>
+                <Score></Score>
                 <div className="score-counter">
                   {product.reviews.length
                     ? `${product.reviews.length}Reviews`
@@ -130,26 +130,28 @@ const ProductPage = ({ type, product }) => {
               </div>
               <hr />
               <div className="description-product-page__price">
-                <div className="price-model"><p className="asortment-description-price">
-                  {`$ ${
-                    product.discount === null
-                      ? product.price
-                      : (
-                        product.price -
-                          (product.price / 100) *
-                            parseInt(product.discount.match(/\d+/), 10)
-                        ).toFixed(2)
-                  }`}
-                  <span
-                    className={
-                      product.discount != null
-                        ? "asortment-description-discount"
-                        : "asortment-description-discount-none"
-                    }
-                  >
-                    ${product.price}
-                  </span>
-                </p></div>
+                <div className="price-model">
+                  <p className="asortment-description-price">
+                    {`$ ${
+                      product.discount === null
+                        ? product.price
+                        : (
+                            product.price -
+                            (product.price / 100) *
+                              parseInt(product.discount.match(/\d+/), 10)
+                          ).toFixed(2)
+                    }`}
+                    <span
+                      className={
+                        product.discount != null
+                          ? "asortment-description-discount"
+                          : "asortment-description-discount-none"
+                      }
+                    >
+                      ${product.price}
+                    </span>
+                  </p>
+                </div>
                 <button className="card-add">Add to card</button>
                 <div className="price-icon-heard">
                   <img src={heart} alt="heart" />
@@ -201,10 +203,22 @@ const ProductPage = ({ type, product }) => {
                 <h3 className="guaranties-title">ADDITIONAL INFORMATION</h3>
                 <p className="model-description-acсent">
                   Color:
-                  <span className="no-accent">Blue, White, Black, Grey</span>
+                  {[...uniqueColors]
+                    .map((item) =>
+                      product.images.find(({ color }) => color === item)
+                    )
+                    .map(({color,id}) => {
+                      return (
+                        <span key={id} className="no-accent">{color}</span>
+                      );
+                    })}
+                  
                 </p>
                 <p className="model-description-acсent">
-                  Size:<span className="no-accent">XS, S, M, L</span>
+                  Size:
+                  {product.sizes.map((item,id) => {
+                    return <span className="no-accent" key={id}>{item}</span>;
+                  })}
                 </p>
                 <p className="model-description-acсent">
                   Material:<span className="no-accent">{product.material}</span>
@@ -215,50 +229,24 @@ const ProductPage = ({ type, product }) => {
                 <h3 className="guaranties-title">REVIEWS</h3>
                 <div className="reviews-item-stars">
                   <div className="review-description">
-                    <div className="asortment-description-score">
-                      <img src={star} alt="score" />
-                      <img src={star} alt="score" />
-                      <img src={star} alt="score" />
-                      <img src={star} alt="score" />
-                      <img src={star} alt="score" />
-                    </div>
-                    <div className="score-counter">2 Reviews</div>
+                  <Score></Score>
+                    <div className="score-counter">{product.reviews.length
+                    ? `${product.reviews.length}Reviews`
+                    : `No Reviews`}</div>
                   </div>
                   <p>Write a review</p>
                 </div>
-                <div className="reviews-item">
+                {product.reviews.map((item)=>{
+                  return (<div className="reviews-item" key={item.id}>
                   <div className="reviews-item-stars">
-                    <p className="review-name">Oleh Chabanov</p>
-                    <div className="asortment-description-score">
-                      <img src={star} alt="score" />
-                      <img src={star} alt="score" />
-                      <img src={star} alt="score" />
-                      <img src={star} alt="score" />
-                      <img src={star} alt="score" />
-                    </div>
+                    <p className="review-name">{item.name}</p>
+                    <Score></Score>
                   </div>
                   <div>
-                    On the other hand, we denounce with righteous indignation
-                    and like men who are so beguiled and demoralized by the
-                    charms of pleasure of the moment
+                    {item.text}
                   </div>
-                </div>
-                <div className="reviews-item">
-                  <div className="reviews-item-stars">
-                    <p className="review-name">ShAmAn design</p>
-                    <div className="asortment-description-score">
-                      <img src={star} alt="score" />
-                      <img src={star} alt="score" />
-                      <img src={star} alt="score" />
-                      <img src={star} alt="score" />
-                      <img src={star} alt="score" />
-                    </div>
-                  </div>
-                  <div>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis praesentium voluptatum deleniti
-                  </div>
-                </div>
+                </div>)
+                })}
               </div>
               <hr />
             </div>

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { PARTICULARS } from "../../../constants/particulars";
 
-const Categories = ({ onClickItem }) => {
+const Categories = () => {
   const [activeItem, setActiveItem] = React.useState(0);
   const onSelectItem = (index) => {
     setActiveItem(index);

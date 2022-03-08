@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style/clothesstyle.css';
 import FilterBlock from '../components/Main/WomenMen/FilterBlock';
 import WomenAsortment from '../components/Main/WomenMen/WomenAsortment';
@@ -13,10 +14,15 @@ const ClothesWomen = () => {
         <div className="womens-block-header header-page womens-block-header-two">
           <div className="container womens-block-header-content">
             <div className="womens-block-header-interface">
-              <div className="header-path">
-                <span>Home</span>
+            <div className="header-path">
+              <Link to={`/`}>
+              <span>Home</span>
+             </Link>
                 <img src={arrov} alt="arrow" />
+                <Link to={`/women`}>
                 <span className="active-nav">Women</span>
+             </Link>
+               
               </div>
               <div className="header-share">Share</div>
             </div>

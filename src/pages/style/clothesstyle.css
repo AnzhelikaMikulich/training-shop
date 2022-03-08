@@ -63,6 +63,14 @@
   gap: 5px;
   font-size: 11px;
 }
+.header-path a span {
+  color: black;
+  font-family: "Spartan", sans-serif;
+  display: inline-block;
+}
+.header-path a span:first-letter {
+  text-transform: uppercase;
+}
 
 /* Filter */
 .filter-block {
