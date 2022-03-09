@@ -12,7 +12,7 @@ const Women = () => {
     <section className="womens-block clothes" data-test-id="clothes-women">
       <div className="womens-block-header">
         <h2 className="womens-block-title">WOMEN’S</h2>
-        <Categories activeItem= {activeItem} setActiveItem = {setActiveItem} ></Categories>
+        <Categories type='women' activeItem= {activeItem} setActiveItem = {setActiveItem} ></Categories>
       </div>
       <div className="womens-block-asortment">
         {PRODUCTS.women.map((item) => {

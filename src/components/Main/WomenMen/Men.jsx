@@ -13,6 +13,7 @@ const Men = () => {
       <div className="womens-block-header">
         <h2 className="womens-block-title">MEN’S</h2>
         <Categories
+        type='men'
           activeItem={activeItem}
           setActiveItem={setActiveItem}
         ></Categories>

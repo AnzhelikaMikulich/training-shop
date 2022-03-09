@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import './style/clothesstyle.css';
 import FilterBlock from '../components/Main/WomenMen/FilterBlock';
-import Filter from '../components/ClothesMenPage/Filter';
+import Filter from '../components/Filter/Filter';
 import MenPageAsortment from '../components/ClothesMenPage/MenPageAsortment';
 import FormFooter from '../components/Main/Form/FormFooter';
 import arrov from '.././assets/image/pages/arrov.png'
@@ -34,7 +34,7 @@ const ClothesMen = () => {
         </div>
         <div className="container">
           <FilterBlock></FilterBlock>
-          <Filter></Filter>
+          <Filter productType='men'></Filter>
           <section className="womens-block">
             <MenPageAsortment></MenPageAsortment>
             <div className="womens-block-loader">

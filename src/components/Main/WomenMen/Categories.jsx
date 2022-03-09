@@ -1,7 +1,7 @@
 import React from "react";
 import { PARTICULARS } from "../../../constants/particulars";
 
-const Categories = ({ activeItem, setActiveItem }) => {
+const Categories = ({ activeItem, setActiveItem,type }) => {
   const onSelectItem = (index) => {
     setActiveItem(index);
   };
@@ -17,7 +17,7 @@ const Categories = ({ activeItem, setActiveItem }) => {
                 ? "womens-block-nav-title womens-block-nav-active"
                 : "womens-block-nav-title"
             }
-            data-test-id={`clothes-women-${item.particularName}`}
+            data-test-id={`clothes-${type}-${item.particularName}`}
           >
             {item.name}
           </li>

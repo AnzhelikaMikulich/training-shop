@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './style/clothesstyle.css';
 import FilterBlock from '../components/Main/WomenMen/FilterBlock';
-import Filter from '../components/ClothesMenPage/Filter';
+import Filter from '../components/Filter/Filter';
 import WomenPageAsortment from '../components/ClothesWomenPage/WomenPageAsortment';
 import FormFooter from '../components/Main/Form/FormFooter';
 import arrov from '.././assets/image/pages/arrov.png'
@@ -32,7 +32,7 @@ const ClothesWomen = () => {
         </div>
         <div className="container">
           <FilterBlock></FilterBlock>
-          <Filter></Filter>
+          <Filter productType='women'></Filter>
           <section className="womens-block">
             <WomenPageAsortment ></WomenPageAsortment>
             <div className="womens-block-loader">
