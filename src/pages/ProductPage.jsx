@@ -50,7 +50,7 @@ const ProductPage = ({ type, product }) => {
             </h2>
             <div className="womens-block-header-interface">
               <div className="header-path">
-                <Score></Score>
+                <Score countStar={+product.reviews.length} ></Score>
                 <div className="score-counter">
                   {product.reviews.length
                     ? `${product.reviews.length}Reviews`
@@ -224,7 +224,7 @@ const ProductPage = ({ type, product }) => {
                 <h3 className="guaranties-title">REVIEWS</h3>
                 <div className="reviews-item-stars">
                   <div className="review-description">
-                    <Score></Score>
+                    <Score countStar ={+product.reviews.length} ></Score>
                     <div className="score-counter">
                       {product.reviews.length
                         ? `${product.reviews.length}Reviews`
@@ -238,7 +238,7 @@ const ProductPage = ({ type, product }) => {
                     <div className="reviews-item" key={item.id}>
                       <div className="reviews-item-stars">
                         <p className="review-name">{item.name}</p>
-                        <Score></Score>
+                        <Score countStar ={+item.rating}></Score>
                       </div>
                       <div>{item.text}</div>
                     </div>

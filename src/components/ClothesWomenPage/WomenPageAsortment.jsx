@@ -54,7 +54,7 @@ const WomenPageAsortment = () => {
                       ${item.price}
                     </span>
                   </p>
-                  <Score></Score>
+                  <Score countStar={+item.rating}></Score>
                 </div>
               </div>
             </Link>

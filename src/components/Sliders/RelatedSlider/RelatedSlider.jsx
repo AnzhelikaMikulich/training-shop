@@ -41,7 +41,7 @@ const RelatedSlider = () => {
               <p className="asortment-title">Women's tracksuit Q109</p>
               <div className="asortment-description">
                 <p className="asortment-description-price">$ 30.00</p>
-                <Score></Score>
+                <Score countStar={5} ></Score>
               </div>
             </SwiperSlide>
           );

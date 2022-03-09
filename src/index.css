@@ -520,6 +520,10 @@ body {
   }
 }
 /*--------- womens-mens-block */
+.starsRewiws {
+  display: flex;
+  gap: 3px;
+}
 .womens-block {
   display: flex;
   flex-direction: column;
@@ -640,6 +644,23 @@ body {
     flex-direction: column;
     gap: 15px;
   }
+  .womens-block-asortment-discount {
+    font: 500 10px / 10px "Spartan", sans-serif;
+  }
+}
+@media (max-width: 840px) {
+  .asortment-description {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .womens-block-asortment-discount {
+    font: 500 8px / 8px "Spartan", sans-serif;
+  }
+  .asortment-description-price,
+  .asortment-description-discount {
+    font-size: 12px;
+    line-height: 12px;
+  }
 }
 @media (max-width: 670px) {
   .womens-block-asortment {
@@ -654,6 +675,14 @@ body {
   .womens-block-nav {
     gap: 10px;
     flex-direction: column;
+  }
+  .asortment-description-price,
+  .asortment-description-discount {
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .womens-block-asortment-discount {
+    font: 500 5px / 5px "Spartan", sans-serif;
   }
 }
 /* ---------------special-offers */
