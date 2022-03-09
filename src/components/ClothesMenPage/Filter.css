@@ -1,0 +1,30 @@
+.filter {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  background: #f8f8f8;
+  padding: 24px 42px;
+  margin: 20px 0;
+}
+.filter-none {
+  display: none;
+}
+.filter-item-title {
+  font-family: "Spartan";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #121212;
+}
+.filter-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.filter-item-content-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

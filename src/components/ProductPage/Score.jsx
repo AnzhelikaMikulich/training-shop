@@ -6,9 +6,9 @@ const Score = ({ countStar }) => {
   return <div className="starsRewiws">
     {arrStars.map((item) => {
     return item.id <= countStar ? (
-      <Star color="#F0CC84" />
+      <Star key={item.id} color="#F0CC84" />
     ) : (
-      <Star color="#E6E6E6" />
+      <Star key={item.id} color="#E6E6E6" />
     );
   })}
   </div>
