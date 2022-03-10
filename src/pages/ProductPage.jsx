@@ -27,7 +27,7 @@ const ProductPage = ({ type, product }) => {
       setActiveIdColor(product.images[0].id);
     }
     defaultSelect();
-  }, [product.id]);
+  }, [product.id,product.sizes,product.images]);
   let uniqueColors = new Set(product.images.map(({ color }) => color));
   let workBlock = [
     { image: shipping, text: "Shipping & Delivery" },
