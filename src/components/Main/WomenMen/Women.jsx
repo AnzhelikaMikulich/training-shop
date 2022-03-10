@@ -72,7 +72,7 @@ const Women = () => {
         })}
       </div>
       
-      <h3 className="womens-block-all">See All</h3>
+      <Link to={`/women`}><h3 className="womens-block-all">See All</h3></Link>
     </section>
   );
 };
