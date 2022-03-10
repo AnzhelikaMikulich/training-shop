@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import "./Filter.css";
 import { PRODUCTS } from "../../constants/data";
 import "../../pages/style/clothesstyle.css";
@@ -210,16 +210,6 @@ const Filter = ({ productType }) => {
   };
 
   const [finalAssortment, setFinalAsortment] = useState(PRODUCTS[productType]);
-
- 
-
-  useEffect(() => {
-    toggleFilter(true);
-    setSetFinalSize((setFinalSize = new Set()));
-    setSetFinalBrands((setFinalBrands = new Set()));
-    setSetFinalPrice((setFinalPrice = new Set()));
-    setFinalAsortment(PRODUCTS[productType]);
-  }, [productType]);
 
   return (
     <div>
