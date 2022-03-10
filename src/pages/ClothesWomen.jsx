@@ -31,7 +31,7 @@ const ClothesWomen = () => {
           </div>
         </div>
         <div className="container">
-          <FilterBlock></FilterBlock>
+          {/* <FilterBlock></FilterBlock> */}
           <Filter productType='women'></Filter>
           <section className="womens-block">
             <WomenPageAsortment ></WomenPageAsortment>

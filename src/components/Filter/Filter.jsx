@@ -1,7 +1,13 @@
 import React from "react";
 import { useMemo } from "react";
+import { useState } from "react";
 import "./Filter.css";
 import { PRODUCTS } from "../../constants/data";
+import "../../pages/style/clothesstyle.css";
+import filter from "../../assets/image/pages/filter.png";
+import list from "../../assets/image/pages/list.png";
+import table from "../../assets/image/pages/table.png";
+import classNames from "classnames";
 
 const Filter = ({ productType }) => {
   let filterArr = [
@@ -47,8 +53,31 @@ const Filter = ({ productType }) => {
   let allSise = useMemo(()=>finsAllSise(), [productType]);
   let allBrands = useMemo(()=>findAllBrands(), [productType]);
   let allPrice = useMemo(()=>findAllPrice(), []);
+
+  const [isFilterClose, toggleFilter] = useState(true)
+  const clickFilter = () => {
+      toggleFilter(!isFilterClose)
+  };
+
   return (
-    <section className="filter" data-test-id={`filters-${productType}`}>
+    <div>
+    <section className="filter-block">
+      <button className="filter-button " data-test-id="filter-button" onClick={clickFilter}>
+        <div className="page-btn">
+          <img src={filter} alt="filter" />
+        </div>
+        <p>FILTER</p>
+      </button>
+      <div className="filter-position">
+        <button className="page-btn">
+          <img src={list} alt="table" />
+        </button>
+        <button className="page-btn">
+          <img src={table} alt="table" />
+        </button>
+      </div>
+    </section>
+    <section className={classNames('filter', {'filter-none': isFilterClose})} data-test-id={`filters-${productType}`}>
           <div className="filter-item">
             <h3 className="filter-item-title">{filterArr[0].title}</h3>
             <div className="filter-item-content" data-test-id={filterArr[0].id}>
@@ -122,6 +151,8 @@ const Filter = ({ productType }) => {
             </div>
           </div>
     </section>
+  </div>
+    
   );
 };
 
