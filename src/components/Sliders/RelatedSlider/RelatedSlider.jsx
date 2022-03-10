@@ -1,5 +1,4 @@
 import React from "react";
-import { relatedItems } from "./RelatedItems";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import Score from "../../ProductPage/Score";

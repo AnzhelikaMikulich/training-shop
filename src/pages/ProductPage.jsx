@@ -15,19 +15,22 @@ import send from ".././assets/image/productpage/send.png";
 import heart from ".././assets/image/productpage/heart.png";
 import scales from ".././assets/image/productpage/scales.png";
 
-const ProductPage = ({ type, product,}) => {
+const ProductPage = ({ type, product }) => {
   const [activeIdColor, setActiveIdColor] = useState(product.images[0].id);
   const [activeColor, setActiveColor] = useState(product.images[0].color);
   const [activeSize, setActiveSize] = useState(product.sizes[0]);
-  function defaultSelect(){
-    setActiveColor(product.images[0].color)
-    setActiveSize(product.sizes[0])
-    setActiveIdColor(product.images[0].id)
-  }
-  useEffect(()=>defaultSelect(),[product.id])
+  
+  useEffect(() => {
+    function defaultSelect() {
+      setActiveColor(product.images[0].color);
+      setActiveSize(product.sizes[0]);
+      setActiveIdColor(product.images[0].id);
+    }
+    defaultSelect();
+  }, [product.id]);
   let uniqueColors = new Set(product.images.map(({ color }) => color));
   let workBlock = [
-    { image: shipping , text: "Shipping & Delivery" },
+    { image: shipping, text: "Shipping & Delivery" },
     { image: return1, text: "Returns & Exchanges" },
     { image: send, text: "Ask a question" },
   ];
@@ -56,7 +59,7 @@ const ProductPage = ({ type, product,}) => {
             </h2>
             <div className="womens-block-header-interface">
               <div className="header-path">
-                <Score countStar={+product.reviews.length} ></Score>
+                <Score countStar={+product.reviews.length}></Score>
                 <div className="score-counter">
                   {product.reviews.length
                     ? `${product.reviews.length}Reviews`
@@ -172,15 +175,17 @@ const ProductPage = ({ type, product,}) => {
               </div>
               <hr />
               <div className="delivery-work description-product-page__shipping">
-                {workBlock.map((item, index)=>{
-                  return(<div className="work-block" key={index} >
-                  <div className="work-block-img">
-                    <img src={item.image} alt="work-block" />
-                  </div>
-                  <div className="work-block-description">
-                    <p className="work-block-text">{item.text}</p>
-                  </div>
-                </div>)
+                {workBlock.map((item, index) => {
+                  return (
+                    <div className="work-block" key={index}>
+                      <div className="work-block-img">
+                        <img src={item.image} alt="work-block" />
+                      </div>
+                      <div className="work-block-description">
+                        <p className="work-block-text">{item.text}</p>
+                      </div>
+                    </div>
+                  );
                 })}
               </div>
               <hr />
@@ -230,7 +235,7 @@ const ProductPage = ({ type, product,}) => {
                 <h3 className="guaranties-title">REVIEWS</h3>
                 <div className="reviews-item-stars">
                   <div className="review-description">
-                    <Score countStar ={+product.reviews.length} ></Score>
+                    <Score countStar={+product.reviews.length}></Score>
                     <div className="score-counter">
                       {product.reviews.length
                         ? `${product.reviews.length}Reviews`
@@ -244,7 +249,7 @@ const ProductPage = ({ type, product,}) => {
                     <div className="reviews-item" key={item.id}>
                       <div className="reviews-item-stars">
                         <p className="review-name">{item.name}</p>
-                        <Score countStar ={+item.rating}></Score>
+                        <Score countStar={+item.rating}></Score>
                       </div>
                       <div>{item.text}</div>
                     </div>
@@ -254,7 +259,7 @@ const ProductPage = ({ type, product,}) => {
               <hr />
             </div>
           </div>
-          <RelatedSlider type = {type} product = {product}></RelatedSlider>
+          <RelatedSlider type={type} product={product}></RelatedSlider>
         </div>
         <FormFooter></FormFooter>
       </main>
