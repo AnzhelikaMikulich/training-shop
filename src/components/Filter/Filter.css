@@ -28,3 +28,13 @@
   align-items: center;
   gap: 10px;
 }
+.find-items {
+  display: flex;
+  gap: 20px;
+}
+.counter-items-close {
+  display: none;
+}
+.filter-items-close {
+  display: none;
+}

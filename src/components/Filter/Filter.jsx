@@ -100,7 +100,7 @@ const Filter = ({ productType }) => {
         .filter((brand) => setFinalBrands.size === 0 || isThereBrand(brand))
         .filter((price) => setFinalPrice.size === 0 || isTherePrice(price))
     );
-    
+    allModelsCount = setFinalAsortment.length
   };
   const onChangeSizeInput = (e) => {
     if (e.target.checked) {
@@ -117,7 +117,7 @@ const Filter = ({ productType }) => {
         .filter((brand) => setFinalBrands.size === 0 || isThereBrand(brand))
         .filter((price) => setFinalPrice.size === 0 || isTherePrice(price))
     );
-    
+    allModelsCount = setFinalAsortment.length
   };
   const onChangeBrandInput = (e) => {
     if (e.target.checked) {
@@ -134,7 +134,7 @@ const Filter = ({ productType }) => {
         .filter((brand) => setFinalBrands.size === 0 || isThereBrand(brand))
         .filter((price) => setFinalPrice.size === 0 || isTherePrice(price))
     );
-    
+    allModelsCount = setFinalAsortment.length
   };
   const onChangePriceInput = (e) => {
     if (e.target.checked) {
@@ -151,7 +151,7 @@ const Filter = ({ productType }) => {
         .filter((brand) => setFinalBrands.size === 0 || isThereBrand(brand))
         .filter((price) => setFinalPrice.size === 0 || isTherePrice(price))
     );
-    
+    allModelsCount = setFinalAsortment.length
   };
 
   //compare
@@ -208,9 +208,9 @@ const Filter = ({ productType }) => {
       }
     }
   };
-
+  
   const [finalAssortment, setFinalAsortment] = useState(PRODUCTS[productType]);
-
+let allModelsCount = finalAssortment.length
   return (
     <div>
       <section className="filter-block">
@@ -318,6 +318,13 @@ const Filter = ({ productType }) => {
           </div>
         </div>
       </section>
+      <div className='find-items'>
+                <div className={classNames( {'counter-items-close': setFinalColors.size===0&&setFinalSize.size===0&&setFinalBrands.size===0&&setFinalPrice.size===0})}>{`${allModelsCount} items Found`}</div>
+                <span className={classNames( {'filter-items-close': setFinalColors.size===0})}>Color: {Array.from(setFinalColors).join(", ")}</span>
+                <span className={classNames({'filter-items-close': setFinalSize.size===0})}>Size: {Array.from(setFinalSize).join(", ")}</span>
+                <span className={classNames({'filter-items-close': setFinalBrands.size===0})}>Brand: {Array.from(setFinalBrands).join(", ")}</span>
+                <span className={classNames({'filter-items-close': setFinalPrice.size===0})} >Price: {Array.from(setFinalPrice).join(", ")}</span>
+            </div>
       <PageAsortment
         productsArr={finalAssortment}
         productType={productType}
