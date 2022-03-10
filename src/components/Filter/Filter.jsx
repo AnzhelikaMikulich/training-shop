@@ -49,11 +49,6 @@ const Filter = ({ productType }) => {
   ];
   let findAllPrice =()=>['0-100$','100-300$','300-500$','500-1000$','>1000$']
   
-  let allColors = useMemo(()=>findAllColors(),[productType]);
-  let allSise = useMemo(()=>finsAllSise(), [productType]);
-  let allBrands = useMemo(()=>findAllBrands(), [productType]);
-  let allPrice = useMemo(()=>findAllPrice(), []);
-
   const [isFilterClose, toggleFilter] = useState(true)
   const clickFilter = () => {
       toggleFilter(!isFilterClose)
@@ -81,7 +76,7 @@ const Filter = ({ productType }) => {
           <div className="filter-item">
             <h3 className="filter-item-title">{filterArr[0].title}</h3>
             <div className="filter-item-content" data-test-id={filterArr[0].id}>
-              {allColors.map((color) => {
+              {findAllColors().map((color) => {
                 return (
                   <div className="filter-item-content-item" key={color}>
                     <input
@@ -99,7 +94,7 @@ const Filter = ({ productType }) => {
           <div className="filter-item">
             <h3 className="filter-item-title">{filterArr[1].title}</h3>
             <div className="filter-item-content" data-test-id={filterArr[1].id}>
-            {allSise.map((size) => {
+            {finsAllSise().map((size) => {
                 return (
                   <div className="filter-item-content-item" key={size}>
                     <input
@@ -117,7 +112,7 @@ const Filter = ({ productType }) => {
           <div className="filter-item">
             <h3 className="filter-item-title">{filterArr[2].title}</h3>
             <div className="filter-item-content" data-test-id={filterArr[2].id}>
-              {allBrands.map((brand) => {
+              {findAllBrands().map((brand) => {
                 return (
                   <div className="filter-item-content-item" key={brand}>
                     <input
@@ -135,7 +130,7 @@ const Filter = ({ productType }) => {
           <div className="filter-item">
             <h3 className="filter-item-title">{filterArr[3].title}</h3>
             <div className="filter-item-content" data-test-id={filterArr[3].id}>
-              {allPrice.map((price) => {
+              {findAllPrice().map((price) => {
                 return (
                   <div className="filter-item-content-item" key={price}>
                     <input
