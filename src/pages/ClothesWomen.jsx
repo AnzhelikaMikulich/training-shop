@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './style/clothesstyle.css';
-import FilterBlock from '../components/Main/WomenMen/FilterBlock';
 import Filter from '../components/Filter/Filter';
 import WomenPageAsortment from '../components/ClothesWomenPage/WomenPageAsortment';
 import FormFooter from '../components/Main/Form/FormFooter';
@@ -31,7 +30,7 @@ const ClothesWomen = () => {
           </div>
         </div>
         <div className="container">
-          {/* <FilterBlock></FilterBlock> */}
+          
           <Filter productType='women'></Filter>
           <section className="womens-block">
             <WomenPageAsortment ></WomenPageAsortment>
