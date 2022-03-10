@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./style/clothesstyle.css";
@@ -15,10 +15,16 @@ import send from ".././assets/image/productpage/send.png";
 import heart from ".././assets/image/productpage/heart.png";
 import scales from ".././assets/image/productpage/scales.png";
 
-const ProductPage = ({ type, product }) => {
+const ProductPage = ({ type, product,}) => {
   const [activeIdColor, setActiveIdColor] = useState(product.images[0].id);
   const [activeColor, setActiveColor] = useState(product.images[0].color);
   const [activeSize, setActiveSize] = useState(product.sizes[0]);
+  function defaultSelect(){
+    setActiveColor(product.images[0].color)
+    setActiveSize(product.sizes[0])
+    setActiveIdColor(product.images[0].id)
+  }
+  useEffect(()=>defaultSelect(),[product.id])
   let uniqueColors = new Set(product.images.map(({ color }) => color));
   let workBlock = [
     { image: shipping , text: "Shipping & Delivery" },
@@ -248,7 +254,7 @@ const ProductPage = ({ type, product }) => {
               <hr />
             </div>
           </div>
-          <RelatedSlider></RelatedSlider>
+          <RelatedSlider type = {type} product = {product}></RelatedSlider>
         </div>
         <FormFooter></FormFooter>
       </main>

@@ -9,6 +9,22 @@
 .filter-none {
   display: none;
 }
+.filter-item {
+  height: 300px;
+  overflow: auto;
+  padding: 10px;
+}
+.filter-item::-webkit-scrollbar {
+  width: 6px;
+  background-color: #afacac;
+}
+/* .filter-item-content {
+  overflow-y: scroll;
+}
+.filter-item-content::-webkit-scrollbar {
+  width: 3px;
+  background-color: #afacac;
+} */
 .filter-item-title {
   font-family: "Spartan";
   font-weight: 600;
@@ -23,6 +39,7 @@
   flex-direction: column;
   gap: 15px;
 }
+
 .filter-item-content-item {
   display: flex;
   align-items: center;
