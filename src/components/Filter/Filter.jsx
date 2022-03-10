@@ -1,5 +1,4 @@
 import React from "react";
-import { useMemo } from "react";
 import { useState } from "react";
 import "./Filter.css";
 import { PRODUCTS } from "../../constants/data";
