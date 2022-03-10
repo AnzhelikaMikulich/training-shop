@@ -100,7 +100,7 @@ const Filter = ({ productType }) => {
         .filter((brand) => setFinalBrands.size === 0 || isThereBrand(brand))
         .filter((price) => setFinalPrice.size === 0 || isTherePrice(price))
     );
-    count = setFinalAsortment.length;
+    
   };
   const onChangeSizeInput = (e) => {
     if (e.target.checked) {
@@ -117,7 +117,7 @@ const Filter = ({ productType }) => {
         .filter((brand) => setFinalBrands.size === 0 || isThereBrand(brand))
         .filter((price) => setFinalPrice.size === 0 || isTherePrice(price))
     );
-    count = setFinalAsortment.length;
+    
   };
   const onChangeBrandInput = (e) => {
     if (e.target.checked) {
@@ -134,7 +134,7 @@ const Filter = ({ productType }) => {
         .filter((brand) => setFinalBrands.size === 0 || isThereBrand(brand))
         .filter((price) => setFinalPrice.size === 0 || isTherePrice(price))
     );
-    count = setFinalAsortment.length;
+    
   };
   const onChangePriceInput = (e) => {
     if (e.target.checked) {
@@ -151,7 +151,7 @@ const Filter = ({ productType }) => {
         .filter((brand) => setFinalBrands.size === 0 || isThereBrand(brand))
         .filter((price) => setFinalPrice.size === 0 || isTherePrice(price))
     );
-    count = setFinalAsortment.length;
+    
   };
 
   //compare
@@ -211,7 +211,7 @@ const Filter = ({ productType }) => {
 
   const [finalAssortment, setFinalAsortment] = useState(PRODUCTS[productType]);
 
-  let count = finalAssortment.length;
+ 
 
   useEffect(() => {
     toggleFilter(true);
