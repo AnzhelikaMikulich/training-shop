@@ -1,19 +1,19 @@
 import React from "react";
 import Score from "../ProductPage/Score";
 import { Link } from "react-router-dom";
-import { PRODUCTS } from "../../constants/data";
 
-const WomenPageAsortment = () => {
+
+const PageAsortment = ({productsArr,productType}) => {
   return (
     <div>
       <div className="womens-block-asortment">
-        {PRODUCTS.women.map((item) => {
+        {productsArr.map((item) => {
           return (
             <Link
               key={item.id}
-              to={`/women/${item.id}`}
+              to={`/${productType}/${item.id}`}
               className="cards-item"
-              data-test-id={`clothes-card-women`}
+              data-test-id={`clothes-card-${productType}`}
             >
               <div className="womens-block-asortment-item">
                 <div className="womens-block-asortment-img">
@@ -65,4 +65,4 @@ const WomenPageAsortment = () => {
   );
 };
 
-export default WomenPageAsortment;
+export default PageAsortment;

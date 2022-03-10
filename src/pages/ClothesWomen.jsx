@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './style/clothesstyle.css';
 import Filter from '../components/Filter/Filter';
-import WomenPageAsortment from '../components/ClothesWomenPage/WomenPageAsortment';
 import FormFooter from '../components/Main/Form/FormFooter';
 import arrov from '.././assets/image/pages/arrov.png'
 import loader from '.././assets/image/pages/loader.gif'
@@ -33,7 +32,6 @@ const ClothesWomen = () => {
           
           <Filter productType='women'></Filter>
           <section className="womens-block">
-            <WomenPageAsortment ></WomenPageAsortment>
             <div className="womens-block-loader">
               <img src={loader} alt="loader" />
             </div>
