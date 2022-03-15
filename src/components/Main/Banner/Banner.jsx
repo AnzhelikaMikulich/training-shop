@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ShoppingCard from '../../ShoppingCard/ShoppingCard';
 import BannerSlider from '../../Sliders/MainSlider/BannerSlider';
 import banner1 from '../../../assets/image/banner/banner1.jpg'
 import banner2 from '../../../assets/image/banner/banner2.jpg'
@@ -9,6 +9,7 @@ const Banner = () => {
   return (
     <section className="banner-prevue">
           <BannerSlider/>
+          <ShoppingCard></ShoppingCard>
           <div className="banner-block-two">
             <div className="banner-block-two-top">
               <div className="banner-block-item">

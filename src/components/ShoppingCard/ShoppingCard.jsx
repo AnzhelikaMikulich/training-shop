@@ -1,5 +1,7 @@
 import React from 'react';
+
 import './ShoppingCard.css'
+import item from '../../assets/image/productpage/slider1.png'
 
 const ShoppingCard = () => {
   return (
@@ -15,14 +17,15 @@ const ShoppingCard = () => {
         </nav>
         <div className="shoping-card-item-container">
           <div className="shoping-card-item">
-            <div className="shoping-card-item-img"><img src="./assets/image/productpage/slider1.png" alt="img"/></div>
+            <div className="shoping-card-item-img"><img src={item} alt="img"/></div>
             <div className="shoping-card-item-description">
               <p className="shoping-card-item-name">Women's tracksuit Q109</p>
               <p className="shoping-card-item-color"><span>Blue</span>,<span >S</span></p>
-              <div className="shoping-card-item-count" ><div className="shoping-card-item-counter"> 1</div><p className="shoping-card-item-price">$54.00</p></div>
+              <div className="shoping-card-item-count" ><div className="shoping-card-item-counter"><button className='item-counter-decrease item-counter-card'></button><span>1</span><button className='item-counter-increase item-counter-card'></button> </div> <p className="shoping-card-item-price">$54.00</p></div>
             </div>
             <div className="shoping-card-item-delete"></div>
           </div>
+          
         </div>
         <div className="shoping-card-total-price">
           <p className="shoping-card-total-price-title">Total</p>
