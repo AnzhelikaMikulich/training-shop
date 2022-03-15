@@ -1,0 +1,180 @@
+.popup-shopping-card {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(18, 18, 18, 0.4);
+  /* opacity: 0;
+    visibility: hidden; */
+  transition: all 0.8s ease 0s;
+}
+.popap-shopping-card-body {
+  height: 100vh;
+  width: 388px;
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.shoping-card-header {
+  width: 100%;
+  height: 48px;
+  background-color: rgba(18, 18, 18, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+.shoping-card-title {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.popap-shopping-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.popap-shopping-card-close {
+  background-image: url(./assets/image/shoping-card/close.png);
+  width: 12px;
+  height: 12px;
+  background-position: center;
+  cursor: pointer;
+}
+.shoping-card-nav {
+  width: 100%;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  color: #e6e6e6;
+  display: flex;
+  padding: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+.shoping-card-nav > .nav-shopping-active {
+  color: #121212;
+}
+.shoping-card-nav p {
+  cursor: pointer;
+}
+.shoping-card-total-price {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  justify-content: space-between;
+}
+.shoping-card-total-price-title {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #121212;
+}
+.shoping-card-total {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: #121212;
+}
+.shoping-card-btn {
+  width: 340px;
+  height: 48px;
+  background: #121212;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.further-btn {
+  background: #121212;
+  color: rgba(255, 255, 255, 1);
+}
+.viewcart-btn {
+  background: #f8f8f8;
+  color: rgba(18, 18, 18, 1);
+}
+
+.shoping-card-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.shoping-card-item-img {
+  width: 83px;
+  height: 104px;
+}
+.shoping-card-item-img img {
+  object-fit: cover;
+  width: 100%;
+}
+.shoping-card-item-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.shoping-card-item-name {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #121212;
+  opacity: 0.6;
+}
+.shoping-card-item-color,
+.shoping-card-item-size {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #121212;
+}
+
+.shoping-card-item-count {
+  display: flex;
+  gap: 10px;
+}
+/* .shoping-card-item-counter {
+} */
+.shoping-card-item-price {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: #121212;
+}
+.shoping-card-item-delete {
+  width: 18px;
+  height: 18px;
+  background-image: url(./assets/image/shoping-card/delete.png);
+  background-position: center;
+  align-self: flex-end;
+}
