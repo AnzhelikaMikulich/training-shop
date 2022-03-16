@@ -1,14 +1,16 @@
 import React from "react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import search from "../../assets/image/icons/lupa.png";
 import earth from "../../assets/image/icons/planet.png";
 import human from "../../assets/image/icons/person.png";
 import basket from "../../assets/image/icons/card.png";
 import ShoppingCard from "../ShoppingCard/ShoppingCard";
 
+
 const HeaderUseful = () => {
   const [cardActive, setCardActive] = useState(false);
-
+  const order = useSelector((state) => state.order);
   function toggleCard() {
     setCardActive(!cardActive);
     if (!cardActive) {
@@ -37,11 +39,11 @@ const HeaderUseful = () => {
             <img src={human} alt="human" />
           </a>
         </li>
-        <li onClick={() => toggleCard()}>
+        <li onClick={() => toggleCard()} data-test-id='cart-button'>
           <div className="icons-basket">
             <img src={basket} alt="basket" />
           </div>
-          <div className="bascet-counter">2</div>
+        {order.length>0?<div className="bascet-counter">{order.length}</div>:''}
         </li>
       </ul>
       <ShoppingCard

@@ -10,7 +10,6 @@ import { PRODUCTS } from "../../../constants/data";
 import { Link } from "react-router-dom";
 
 const RelatedSlider = ({ type, product }) => {
-  console.log(PRODUCTS[type]);
   return (
     <div className="other-models">
       <h3 className="assortment-title">RELATED PRODUCTS</h3>

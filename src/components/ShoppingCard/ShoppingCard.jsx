@@ -1,9 +1,23 @@
 import React from "react";
-
+import { useDispatch, useSelector } from "react-redux";
 import "./ShoppingCard.css";
-import item from "../../assets/image/productpage/slider1.png";
+import {
+  removeItemFromCart,
+  changeIncreaseQuantity,
+  changeDecreaseQuantity,
+} from "../../redux/actions/actions";
 
 const ShoppingCard = ({ active, setActive }) => {
+  const order = useSelector((state) => state.order);
+  const dispatch = useDispatch();
+  const sumPrice = order.reduce((acc, current) => {
+    return current.discount === null
+      ? acc + current.price * current.quantity
+      : (current.price -
+          (current.price / 100) * parseInt(current.discount.match(/\d+/), 10)) *
+          current.quantity;
+  }, 0);
+
   function toggleCard() {
     setActive(false);
     if (setActive(false)) {
@@ -24,7 +38,7 @@ const ShoppingCard = ({ active, setActive }) => {
       }
     >
       <div className="popap-shopping-card-body">
-        <div className="popap-shopping-card-content">
+        <div className="popap-shopping-card-content" data-test-id="cart">
           <div className="shoping-card-header">
             <h2 className="shoping-card-title">Shopping Cart</h2>
             <div
@@ -32,41 +46,125 @@ const ShoppingCard = ({ active, setActive }) => {
               className="popap-shopping-card-close shopping-card-close-popap"
             ></div>
           </div>
-          <nav className="shoping-card-nav">
-            <p className="nav-shopping-active">Item in Cart</p>
-            <span>/</span>
-            <p>Delivery Info</p>
-            <span>/</span>
-            <p>Payment</p>
-          </nav>
-          <div className="shoping-card-item-container">
-            <div className="shoping-card-item">
-              <div className="shoping-card-item-img">
-                <img src={item} alt="img" />
+          {console.log(order)}
+          {order.length > 0 ? (
+            <div className="shoping-card-notempty">
+              <nav className="shoping-card-nav">
+                <p className="nav-shopping-active">Item in Cart</p>
+                <span>/</span>
+                <p>Delivery Info</p>
+                <span>/</span>
+                <p>Payment</p>
+              </nav>
+              <div className="shoping-card-item-container">
+                {order.map((item, index) => {
+                  return (
+                    <div
+                      className="shoping-card-item"
+                      key={`${item.id}_${index}`}
+                      data-test-id="cart-card"
+                    >
+                      {item.images.map((img) => {
+                        if (img.color == item.color) {
+                          return (
+                            <div
+                              className="shoping-card-item-img"
+                              key={img.url}
+                            >
+                              <img
+                                src={`https://training.cleverland.by/shop${img.url}`}
+                                alt="img"
+                              />
+                            </div>
+                          );
+                        }
+                        return;
+                      })}
+
+                      <div className="shoping-card-item-description">
+                        <p className="shoping-card-item-name">{item.name}</p>
+                        <p className="shoping-card-item-color">
+                          <span>{item.color}</span>,<span>{item.size}</span>
+                        </p>
+                        <div className="shoping-card-item-count">
+                          <div className="shoping-card-item-counter">
+                            <button
+                              className="item-counter-decrease item-counter-card"
+                              data-test-id="minus-product"
+                              onClick={() =>
+                                dispatch(
+                                  changeDecreaseQuantity(
+                                    item.id,
+                                    item.color,
+                                    item.size
+                                  )
+                                )
+                              }
+                            ></button>
+                            <span>{item.quantity}</span>
+                            <button
+                              className="item-counter-increase item-counter-card"
+                              data-test-id="plus-product"
+                              onClick={() =>
+                                dispatch(
+                                  changeIncreaseQuantity(
+                                    item.id,
+                                    item.color,
+                                    item.size
+                                  )
+                                )
+                              }
+                            ></button>
+                          </div>
+                          <p className="shoping-card-item-price">
+                            {`$ ${
+                              item.discount === null
+                                ? (item.price * item.quantity).toFixed(2)
+                                : (
+                                    (item.price -
+                                      (item.price / 100) *
+                                        parseInt(
+                                          item.discount.match(/\d+/),
+                                          10
+                                        )) *
+                                    item.quantity
+                                  ).toFixed(2)
+                            }`}
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        className="shoping-card-item-delete"
+                        data-test-id="remove-product"
+                        onClick={() =>
+                          dispatch(
+                            removeItemFromCart(item.id, item.color, item.size)
+                          )
+                        }
+                      ></div>
+                    </div>
+                  );
+                })}
               </div>
-              <div className="shoping-card-item-description">
-                <p className="shoping-card-item-name">Women's tracksuit Q109</p>
-                <p className="shoping-card-item-color">
-                  <span>Blue</span>,<span>S</span>
-                </p>
-                <div className="shoping-card-item-count">
-                  <div className="shoping-card-item-counter">
-                    <button className="item-counter-decrease item-counter-card"></button>
-                    <span>1</span>
-                    <button className="item-counter-increase item-counter-card"></button>{" "}
-                  </div>{" "}
-                  <p className="shoping-card-item-price">$54.00</p>
-                </div>
+              <div className="shoping-card-total-price">
+                <p className="shoping-card-total-price-title">Total</p>
+                <p className="shoping-card-total">${sumPrice.toFixed(2)}</p>
               </div>
-              <div className="shoping-card-item-delete"></div>
+              <button className="shoping-card-btn further-btn">Further</button>
+              <button className="shoping-card-btn viewcart-btn">
+                View Cart
+              </button>
             </div>
-          </div>
-          <div className="shoping-card-total-price">
-            <p className="shoping-card-total-price-title">Total</p>
-            <p className="shoping-card-total">$433.99</p>
-          </div>
-          <button className="shoping-card-btn further-btn">Further</button>
-          <button className="shoping-card-btn viewcart-btn">View Cart</button>
+          ) : (
+            <div className="shoping-card-empty">
+              <span>Sorry,</span>
+              <span>your cart</span>
+              <span>is empty</span>
+              <button onClick={() => toggleCard()} className="shoping-card-btn further-btn">
+                back to shopping
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

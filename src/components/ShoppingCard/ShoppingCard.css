@@ -229,3 +229,25 @@
   bottom: -12px;
   background-color: rgba(230, 230, 230, 1);
 }
+.shoping-card-notempty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.shoping-card-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.shoping-card-empty span {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 150%;
+  text-align: center;
+  color: #121212;
+}

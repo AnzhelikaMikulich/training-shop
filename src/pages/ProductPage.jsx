@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { addItemToCart } from "../redux/actions/actions";
+import { removeItemFromCart } from "../redux/actions/actions";
 import "./style/clothesstyle.css";
 import "./style/productstyle.css";
 import ProductSlider from "../components/Sliders/ProductSlider/ProductSlider";
@@ -28,12 +31,19 @@ const ProductPage = ({ type, product }) => {
     }
     defaultSelect();
   }, [product.id,product.sizes,product.images]);
+
   let uniqueColors = new Set(product.images.map(({ color }) => color));
+
   let workBlock = [
     { image: shipping, text: "Shipping & Delivery" },
     { image: return1, text: "Returns & Exchanges" },
     { image: send, text: "Ask a question" },
   ];
+  const order = useSelector((state) => state.order);
+  const dispatch = useDispatch();
+  const isProductInCart = order.filter(
+    (item) => item.color === activeColor && item.size === activeSize,
+  ).length;
 
   return (
     <div className="page-product" data-test-id={`product-page-${type}`}>
@@ -165,7 +175,20 @@ const ProductPage = ({ type, product }) => {
                     </span>
                   </p>
                 </div>
-                <button className="card-add">Add to card</button>
+                <button onClick={() => {
+              isProductInCart
+                ? dispatch(removeItemFromCart(product.id, activeColor, activeSize))
+                : dispatch(addItemToCart(
+                      product.id,
+                      product.name,
+                      product.price,
+                      product.images,
+                      activeColor,
+                      activeSize,
+                      product.discount,
+                    ),
+                  );
+            }} className="card-add" data-test-id='add-cart-button'>{isProductInCart ? 'remove from cart' : 'add to card'}</button>
                 <div className="price-icon-heard">
                   <img src={heart} alt="heart" />
                 </div>
