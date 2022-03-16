@@ -3,14 +3,27 @@ import React from 'react';
 import './ShoppingCard.css'
 import item from '../../assets/image/productpage/slider1.png'
 
-const ShoppingCard = () => {
+const ShoppingCard = ({ active, setActive }) => {
+  function toggleCard() {
+    setActive(false);
+    if (setActive(false)) {
+      document.body.style.overflow = "hidden";
+      document.body.style.margin = "0 16px 0 0";
+   
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.margin = "0 0px 0 0";
+   
+    }
+  }
+  
   return (
-    <div className="popup-shopping-card">
+    <div className={active ? "popup-shopping-card popup-shopping-card-active" : "popup-shopping-card"} >
 
     <div className="popap-shopping-card-body">
       <div className="popap-shopping-card-content">
         <div className="shoping-card-header">
-          <h2 className="shoping-card-title">Shopping Cart</h2><div className="popap-shopping-card-close shopping-card-close-popap"></div>
+          <h2 className="shoping-card-title">Shopping Cart</h2><div onClick={() => toggleCard()} className="popap-shopping-card-close shopping-card-close-popap"></div>
         </div>
         <nav className="shoping-card-nav">
           <p className="nav-shopping-active">Item in Cart</p><span>/</span><p>Delivery Info</p><span>/</span><p>Payment</p>
