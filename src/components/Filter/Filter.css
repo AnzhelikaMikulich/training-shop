@@ -55,3 +55,46 @@
 .filter-items-close {
   display: none;
 }
+@media (max-width: 1062px) {
+  .filter {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .filter {
+    font-size: 8px;
+    gap: 5px;
+    padding: 24px 0px;
+  }
+  .filter-item-content-item input {
+    width: 8px;
+    height: 8px;
+  }
+  .filter-item::-webkit-scrollbar {
+    width: 3px;
+    background-color: #afacac;
+  }
+  .filter-item::-webkit-scrollbar-thumb {
+    background-color: #223c50;
+  }
+  .filter-item-title {
+    font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  .filter {
+    font-size: 6px;
+    gap: 5px;
+  }
+  .filter-item {
+    height: 300px;
+    overflow: auto;
+    padding: 3px;
+  }
+  .filter-item-title {
+    font-size: 9px;
+  }
+  .find-items {
+    font-size: 10px;
+  }
+}

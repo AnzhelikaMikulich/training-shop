@@ -96,7 +96,11 @@ body {
 }
 .header-logo {
   width: 150px;
-  height: 32px;
+}
+.header-logo img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 .nav {
   display: flex;
@@ -182,15 +186,17 @@ body {
 
 @media (max-width: 425px) {
   .header-menu {
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     gap: 3px;
   }
   .header-contacts {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .header-logo {
+    width: 110px;
   }
 }
 
@@ -294,6 +300,13 @@ body {
   .contacts {
     display: none;
   }
+  .header-ui-menu-img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .burger-btn {
+    left: 0px;
+  }
 }
 /* ----------main */
 .main {
@@ -302,6 +315,11 @@ body {
 @media (max-width: 1000px) {
   .main {
     margin: 100px 0 0 0;
+  }
+}
+@media (max-width: 480px) {
+  .main {
+    margin: 65px 0 0 0;
   }
 }
 .banner-prevue {

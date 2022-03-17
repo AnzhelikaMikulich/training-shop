@@ -26,22 +26,22 @@ const HeaderUseful = () => {
       <ul className="header-ui-menu">
         <li>
           <a className="icons-search" href="#section">
-            <img src={search} alt="search" />
+            <img className="header-ui-menu-img" src={search} alt="search" />
           </a>
         </li>
         <li>
           <a className="icons-earth" href="#section">
-            <img src={earth} alt="earth" />
+            <img className="header-ui-menu-img" src={earth} alt="earth" />
           </a>
         </li>
         <li>
           <a className="icons-human" href="#section">
-            <img src={human} alt="human" />
+            <img className="header-ui-menu-img" src={human} alt="human" />
           </a>
         </li>
         <li onClick={() => toggleCard()} data-test-id='cart-button'>
           <div className="icons-basket">
-            <img src={basket} alt="basket" />
+            <img className="header-ui-menu-img" src={basket} alt="basket" />
           </div>
         {order.length>0?<div className="bascet-counter">{order.length}</div>:''}
         </li>
