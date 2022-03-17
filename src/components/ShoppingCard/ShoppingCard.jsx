@@ -78,7 +78,7 @@ const ShoppingCard = ({ active, setActive }) => {
                               />
                             );
                           }
-                          return;
+                          return('');
                         })}
                       </div>
 
