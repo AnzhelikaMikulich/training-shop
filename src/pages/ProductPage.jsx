@@ -158,11 +158,7 @@ const ProductPage = ({ type, product }) => {
                     {`$ ${
                       product.discount === null
                         ? product.price
-                        : (
-                            product.price -
-                            (product.price / 100) *
-                              parseInt(product.discount.match(/\d+/), 10)
-                          ).toFixed(2)
+                        : product.price
                     }`}
                     <span
                       className={
@@ -171,7 +167,15 @@ const ProductPage = ({ type, product }) => {
                           : "asortment-description-discount-none"
                       }
                     >
-                      ${product.price}
+                     {`$ ${
+                      product.discount != null
+                        ? (
+                          product.price +
+                          (product.price / 100) *
+                            parseInt(product.discount.match(/\d+/), 10)
+                        ).toFixed(2)
+                        : product.price
+                    }`}
                     </span>
                   </p>
                 </div>
@@ -188,7 +192,7 @@ const ProductPage = ({ type, product }) => {
                       product.discount,
                     ),
                   );
-            }} className="card-add" data-test-id='add-cart-button'>{isProductInCart ? 'remove to cart' : 'add to card'}</button>
+            }} className="card-add" data-test-id='add-cart-button'>{isProductInCart ? 'remove to card' : 'add to card'}</button>
                 <div className="price-icon-heard">
                   <img src={heart} alt="heart" />
                 </div>

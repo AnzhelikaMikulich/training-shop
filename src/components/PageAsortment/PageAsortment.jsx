@@ -38,11 +38,7 @@ const PageAsortment = ({productsArr,productType}) => {
                     {`$ ${
                       item.discount === null
                         ? item.price
-                        : (
-                            item.price -
-                            (item.price / 100) *
-                              parseInt(item.discount.match(/\d+/), 10)
-                          ).toFixed(2)
+                        : item.price
                     }`}
                     <span
                       className={
@@ -50,8 +46,15 @@ const PageAsortment = ({productsArr,productType}) => {
                           ? "asortment-description-discount"
                           : "asortment-description-discount-none"
                       }
-                    >
-                      ${item.price}
+                    > {`$ ${
+                      item.discount != null
+                        ? (item.price +
+                        (item.price / 100) *
+                          parseInt(item.discount.match(/\d+/), 10))
+                      .toFixed(2)
+                        : item.price
+                    }`}
+                      
                     </span>
                   </p>
                   <Score countStar={+item.rating}></Score>

@@ -43,15 +43,11 @@ const Women = () => {
               </div>
               <p className="asortment-title">{item.name}</p>
               <div className="asortment-description">
-                <p className="asortment-description-price">
+              <p className="asortment-description-price">
                   {`$ ${
                     item.discount === null
                       ? item.price
-                      : (
-                          item.price -
-                          (item.price / 100) *
-                            parseInt(item.discount.match(/\d+/), 10)
-                        ).toFixed(2)
+                      : item.price
                   }`}
                   <span
                     className={
@@ -60,7 +56,15 @@ const Women = () => {
                         : "asortment-description-discount-none"
                     }
                   >
-                    ${item.price}
+                    {`$ ${
+                    item.discount != null
+                      ? (
+                        item.price +
+                        (item.price / 100) *
+                          parseInt(item.discount.match(/\d+/), 10)
+                      ).toFixed(2)
+                      : item.price
+                  }`}
                   </span>
                 </p>
                 <Score countStar={+item.rating}></Score>

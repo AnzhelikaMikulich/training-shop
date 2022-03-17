@@ -11,13 +11,8 @@ const ShoppingCard = ({ active, setActive }) => {
   const order = useSelector((state) => state.order);
   const dispatch = useDispatch();
   const sumPrice = order.reduce((acc, current) => {
-    return current.discount === null
-      ? acc + current.price * current.quantity
-      : acc +
-          (current.price -
-            (current.price / 100) *
-              parseInt(current.discount.match(/\d+/), 10)) *
-            current.quantity;
+    return  acc + current.price * current.quantity
+     
   }, 0);
 
   function toggleCard() {
@@ -119,17 +114,11 @@ const ShoppingCard = ({ active, setActive }) => {
                           </div>
                           <p className="shoping-card-item-price">
                             {`$ ${
-                              item.discount === null
+                              item.discount != null
                                 ? (item.price * item.quantity).toFixed(2)
                                 : (
-                                    (item.price -
-                                      (item.price / 100) *
-                                        parseInt(
-                                          item.discount.match(/\d+/),
-                                          10
-                                        )) *
-                                    item.quantity
-                                  ).toFixed(2)
+                                  (item.price * item.quantity).toFixed(2) 
+                                  )
                             }`}
                           </p>
                         </div>
