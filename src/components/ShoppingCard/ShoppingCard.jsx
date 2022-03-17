@@ -13,7 +13,7 @@ const ShoppingCard = ({ active, setActive }) => {
   const sumPrice = order.reduce((acc, current) => {
     return current.discount === null
       ? acc + current.price * current.quantity
-      : (current.price -
+      :  acc+(current.price -
           (current.price / 100) * parseInt(current.discount.match(/\d+/), 10)) *
           current.quantity;
   }, 0);
@@ -148,7 +148,7 @@ const ShoppingCard = ({ active, setActive }) => {
                 <p className="shoping-card-total">${sumPrice.toFixed(2)}</p>
               </div>
               <button className="shoping-card-btn further-btn">Further</button>
-              <button className="shoping-card-btn viewcart-btn">
+              <button className="shoping-card-btn viewcart-btn"  onClick={() => toggleCard()}>
                 View Cart
               </button>
             </div>
