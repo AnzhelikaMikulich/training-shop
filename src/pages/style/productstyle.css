@@ -170,6 +170,15 @@ hr {
 .description-product-page__shipping .work-block {
   padding-bottom: 0px;
 }
+.description-product-page__shipping
+  > .work-block
+  > .work-block-description
+  > .work-block-text {
+  font-size: 12px;
+}
+.description-product-page__shipping {
+  margin-bottom: 15px;
+}
 .description-product-page__guaranties {
   display: flex;
   flex-direction: column;
@@ -283,6 +292,9 @@ hr {
   .no-accent {
     font-size: 14px;
   }
+  .description-product-page__shipping .work-block {
+    width: 33%;
+  }
 }
 @media (max-width: 850px) {
   .no-accent {
@@ -312,5 +324,18 @@ hr {
   }
   .size-models-item_active {
     font-size: 8px;
+  }
+  .description-product-page__shipping {
+    gap: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .description-product-page__shipping .work-block {
+    padding-bottom: 0px;
+    width: 80%;
   }
 }
