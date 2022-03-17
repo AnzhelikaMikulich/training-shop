@@ -1004,9 +1004,9 @@ body {
     width: 10%;
   }
   .contacts-footer-block-icons {
+    gap: 4px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 5px;
   }
 }
