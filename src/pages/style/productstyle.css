@@ -326,7 +326,7 @@ hr {
     font-size: 8px;
   }
   .description-product-page__shipping {
-    gap: 12px;
+    gap: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
