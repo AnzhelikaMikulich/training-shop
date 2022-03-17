@@ -9,6 +9,7 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.8s ease 0s;
+  display: flex;
 }
 .popup-shopping-card-active {
   opacity: 1;
@@ -47,8 +48,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
+  height: 100%;
 }
 .popap-shopping-card-close {
   background-image: url(../../assets/image/shoping-card/close.png);
@@ -241,9 +242,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+.shoping-card-empty div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
-.shoping-card-empty span {
+.shoping-card-empty div span {
   font-family: "Spartan";
   font-style: normal;
   font-weight: 600;
@@ -251,4 +259,16 @@
   line-height: 150%;
   text-align: center;
   color: #121212;
+}
+.popap-overlay {
+  width: calc(100% - 388px);
+}
+
+@media (max-width: 390px) {
+  .popap-shopping-card-body {
+    width: 100%;
+  }
+  .popap-overlay {
+    width: 0px;
+  }
 }

@@ -13,9 +13,11 @@ const ShoppingCard = ({ active, setActive }) => {
   const sumPrice = order.reduce((acc, current) => {
     return current.discount === null
       ? acc + current.price * current.quantity
-      :  acc+(current.price -
-          (current.price / 100) * parseInt(current.discount.match(/\d+/), 10)) *
-          current.quantity;
+      : acc +
+          (current.price -
+            (current.price / 100) *
+              parseInt(current.discount.match(/\d+/), 10)) *
+            current.quantity;
   }, 0);
 
   function toggleCard() {
@@ -37,6 +39,7 @@ const ShoppingCard = ({ active, setActive }) => {
           : "popup-shopping-card"
       }
     >
+      <div className="popap-overlay" onClick={() => toggleCard()}></div>
       <div className="popap-shopping-card-body">
         <div className="popap-shopping-card-content" data-test-id="cart">
           <div className="shoping-card-header">
@@ -74,7 +77,8 @@ const ShoppingCard = ({ active, setActive }) => {
                                 alt="img"
                               />
                             );
-                          }return
+                          }
+                          return;
                         })}
                       </div>
 
@@ -148,15 +152,19 @@ const ShoppingCard = ({ active, setActive }) => {
                 <p className="shoping-card-total">${sumPrice.toFixed(2)}</p>
               </div>
               <button className="shoping-card-btn further-btn">Further</button>
-              <button className="shoping-card-btn viewcart-btn"  onClick={() => toggleCard()}>
+              <button
+                className="shoping-card-btn viewcart-btn"
+                onClick={() => toggleCard()}
+              >
                 View Cart
               </button>
             </div>
           ) : (
             <div className="shoping-card-empty">
-              <span>Sorry,</span>
+              <div><span>Sorry,</span>
               <span>your cart</span>
-              <span>is empty</span>
+              <span>is empty</span></div>
+              
               <button
                 onClick={() => toggleCard()}
                 className="shoping-card-btn further-btn"
