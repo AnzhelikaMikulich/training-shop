@@ -998,13 +998,13 @@ body {
     justify-content: space-between;
   }
   .footer > .container > .womens-block-header {
-    flex-basis: 45%;
+    flex-basis: 44%;
   }
   .contacts-footer-block-icons img {
     width: 10%;
   }
   .contacts-footer-block-icons {
-    gap: 4px;
+    gap: 5px;
     display: flex;
     justify-content: space-around;
     align-items: center;
