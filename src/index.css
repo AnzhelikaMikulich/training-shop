@@ -682,7 +682,12 @@ body {
 }
 @media (max-width: 670px) {
   .womens-block-asortment {
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .cards-item {
+    width: 100%;
   }
 }
 
@@ -700,7 +705,7 @@ body {
     line-height: 12px;
   }
   .womens-block-asortment-discount {
-    font: 500 5px / 5px "Spartan", sans-serif;
+    font: 500 10px / 5px "Spartan", sans-serif;
   }
 }
 /* ---------------special-offers */
