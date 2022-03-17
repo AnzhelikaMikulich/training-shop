@@ -995,10 +995,10 @@ body {
     width: 90%;
   }
   .footer > .container {
-    justify-content: center;
+    justify-content: space-between;
   }
   .footer > .container > .womens-block-header {
-    flex-basis: 60%;
+    flex-basis: 45%;
   }
   .contacts-footer-block-icons img {
     width: 10%;
