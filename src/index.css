@@ -966,6 +966,14 @@ body {
 .footer-nav-item {
   color: #121212;
 }
+.footer-link {
+  gap: 10px;
+}
+@media (max-width: 1000px) {
+  .footer-nav-item {
+    font-size: 13px;
+  }
+}
 @media (max-width: 750px) {
   .footer > .container {
     flex-wrap: wrap;
@@ -978,12 +986,27 @@ body {
   .contacts-footer-block {
     flex-direction: column;
   }
+  .footer-icon {
+    display: none;
+  }
 }
 @media (max-width: 430px) {
+  .container {
+    width: 90%;
+  }
   .footer > .container {
     justify-content: center;
   }
   .footer > .container > .womens-block-header {
     flex-basis: 60%;
+  }
+  .contacts-footer-block-icons img {
+    width: 10%;
+  }
+  .contacts-footer-block-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
   }
 }
