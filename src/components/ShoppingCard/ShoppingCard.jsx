@@ -11,8 +11,7 @@ const ShoppingCard = ({ active, setActive }) => {
   const order = useSelector((state) => state.order);
   const dispatch = useDispatch();
   const sumPrice = order.reduce((acc, current) => {
-    return  acc + current.price * current.quantity
-     
+    return acc + current.price * current.quantity;
   }, 0);
 
   function toggleCard() {
@@ -73,7 +72,7 @@ const ShoppingCard = ({ active, setActive }) => {
                               />
                             );
                           }
-                          return('');
+                          return "";
                         })}
                       </div>
 
@@ -113,12 +112,7 @@ const ShoppingCard = ({ active, setActive }) => {
                             ></button>
                           </div>
                           <p className="shoping-card-item-price">
-                            {`$ ${
-                              item.discount != null
-                                ? (item.price * item.quantity).toFixed(2)
-                                : (
-                                  (item.price * item.quantity).toFixed(2) 
-                                  )
+                            {`$ ${(item.price * item.quantity).toFixed(2)
                             }`}
                           </p>
                         </div>
@@ -150,10 +144,12 @@ const ShoppingCard = ({ active, setActive }) => {
             </div>
           ) : (
             <div className="shoping-card-empty">
-              <div><span>Sorry,</span>
-              <span>your cart</span>
-              <span>is empty</span></div>
-              
+              <div>
+                <span>Sorry,</span>
+                <span>your cart</span>
+                <span>is empty</span>
+              </div>
+
               <button
                 onClick={() => toggleCard()}
                 className="shoping-card-btn further-btn"
