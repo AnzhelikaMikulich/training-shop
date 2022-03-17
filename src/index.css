@@ -1004,7 +1004,7 @@ body {
     width: 10%;
   }
   .contacts-footer-block-icons {
-    gap: 4px;
+    gap: 5px;
     display: flex;
     justify-content: space-around;
     align-items: center;
