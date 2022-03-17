@@ -188,7 +188,7 @@ const ProductPage = ({ type, product }) => {
                       product.discount,
                     ),
                   );
-            }} className="card-add" data-test-id='add-cart-button'>{isProductInCart ? 'remove from cart' : 'add to card'}</button>
+            }} className="card-add" data-test-id='add-cart-button'>{isProductInCart ? 'remove to cart' : 'add to card'}</button>
                 <div className="price-icon-heard">
                   <img src={heart} alt="heart" />
                 </div>

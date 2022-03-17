@@ -144,6 +144,7 @@
 .shoping-card-item-img {
   width: 83px;
   height: 104px;
+  overflow: hidden;
 }
 .shoping-card-item-img img {
   object-fit: cover;

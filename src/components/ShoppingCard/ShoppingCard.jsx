@@ -64,22 +64,19 @@ const ShoppingCard = ({ active, setActive }) => {
                       key={`${item.id}_${index}`}
                       data-test-id="cart-card"
                     >
-                      {item.images.map((img) => {
-                        if (img.color == item.color) {
-                          return (
-                            <div
-                              className="shoping-card-item-img"
-                              key={img.url}
-                            >
+                      <div className="shoping-card-item-img">
+                        {item.images.map((img) => {
+                          if (img.color === item.color) {
+                            return (
                               <img
+                                key={img.url}
                                 src={`https://training.cleverland.by/shop${img.url}`}
                                 alt="img"
                               />
-                            </div>
-                          );
-                        }
-                        return;
-                      })}
+                            );
+                          }
+                        })}
+                      </div>
 
                       <div className="shoping-card-item-description">
                         <p className="shoping-card-item-name">{item.name}</p>
@@ -160,7 +157,10 @@ const ShoppingCard = ({ active, setActive }) => {
               <span>Sorry,</span>
               <span>your cart</span>
               <span>is empty</span>
-              <button onClick={() => toggleCard()} className="shoping-card-btn further-btn">
+              <button
+                onClick={() => toggleCard()}
+                className="shoping-card-btn further-btn"
+              >
                 back to shopping
               </button>
             </div>
